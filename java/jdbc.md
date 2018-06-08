@@ -17,4 +17,9 @@
   
 1. Connection,PreparedStatement,ResultSet 关闭
     >1. 如果你不使用连接池，那么就没有什么问题，一旦Connection关闭，数据库物理连接就被释放，所有相关Java资源也可以被GC回收了。但是如果你使用连接池，那么请注意，Connection关闭并不是物理关闭，只是归还连接池，所以PreparedStatement和ResultSet都被持有，并且实际占用相关的数据库的游标资源，在这种情况下，只要长期运行，往往就会报“游标超出数据库允许的最大值”的错误，导致程序无法正常访问数据库。   
+1. PreparedStatement和Statement的区别:  
+    >1. 使用PreparedStatement的好处是数据库会对sql语句进行预编译，下次执行相同的sql语句时，数据库端不会再进行预编译了，而直接用数据库的缓冲区，提高数据访问的效率。   
+    >2. PreparedStatement 能防止sql注入，因为PreparedStatement提前预编译好的回把参数转换为字符串，而不是sql语句。但是Statement就是纯粹的sql语句。   
+    >3. PreparedStatement不支持表名，列名 order by X等，只支持参数.Placeholders ? can only be used for parameter values but not with column and sort order directions.   [参考1](https://stackoverflow.com/questions/12430208/using-a-prepared-statement-and-variable-bind-order-by-in-java-with-jdbc-driver)  [参考2](https://www.jianshu.com/p/643866408bb7)    
+    >4. [mybatis相关](http://www.cnblogs.com/friends-wf/p/4227999.html)  
 
