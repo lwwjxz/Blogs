@@ -13,6 +13,8 @@
     > [数据库连接池性能比对(hikari druid c3p0 dbcp jdbc)](https://blog.csdn.net/IT_faquir/article/details/70999862)比较结果为druid和c3p0比较好且成熟，但是druid支持监控，扩展性强，和阿里云上的一些产品结合的比较好比如DRDS，TDDL等  
 1.  数据库中间件选择  
   >1. mycat不是阿里出的，目前不更新也不修复BUG，开源的世界想着加个QQ群还收费，唉，迟早被淘汰(网上的评论)。
-  >2. 需要继续研究。
-
+  >2. 需要继续研究。   
+  
+1. Connection,PreparedStatement,ResultSet 关闭
+   >1. 如果你不使用连接池，那么就没有什么问题，一旦Connection关闭，数据库物理连接就被释放，所有相关Java资源也可以被GC回收了。但是如果你使用连接池，那么请注意，Connection关闭并不是物理关闭，只是归还连接池，所以PreparedStatement和ResultSet都被持有，并且实际占用相关的数据库的游标资源，在这种情况下，只要长期运行，往往就会报“游标超出数据库允许的最大值”的错误，导致程序无法正常访问数据库。   
 
