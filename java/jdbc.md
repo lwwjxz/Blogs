@@ -10,7 +10,7 @@
 3. jdbc不光对数据库的访问做了统一抽取，把数据库驱动的管理也抽象成一个类DriverManager。(模板模式)如果不统一所有的应用程序中都要各自实现一样的功能，造成大量的模板代码。  
 1. [DataSource引入了线程池相关概念](http://blog.51cto.com/lavasoft/265073)   
 2. DataSource选型  
-    > [数据库连接池性能比对(hikari druid c3p0 dbcp jdbc)](https://blog.csdn.net/IT_faquir/article/details/70999862)比较结果为druid和c3p0比较好且成熟，但是druid支持监控，扩展性强，和阿里云上的一些产品结合的比较好比如DRDS，TDDL等  
+    > [数据库连接池性能比对(hikari druid c3p0 dbcp jdbc)](https://blog.csdn.net/IT_faquir/article/details/70999862)比较结果为druid和c3p0比较好且成熟，但是druid支持监控，扩展性强，和阿里云上的一些产品结合的比较好比如DRDS，TDDL等 ,druid支持的功能比较多，如安全方面的sql拦截，监控(耗时，连接泄漏)，数据库密码加密，还在维护(其他已不再维护) 
 1.  数据库中间件选择  
     >1. mycat不是阿里出的，目前不更新也不修复BUG，开源的世界想着加个QQ群还收费，唉，迟早被淘汰(网上的评论)。
     >2. 需要继续研究。   
