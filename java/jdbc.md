@@ -24,7 +24,7 @@
     >2. PreparedStatement 能防止sql注入，因为PreparedStatement提前预编译好的回把参数转换为字符串，而不是sql语句。但是Statement就是纯粹的sql语句。   
     >3. PreparedStatement不支持表名，列名 order by X等，只支持参数.Placeholders ? can only be used for parameter values but not with column and sort order directions.   [参考1](https://stackoverflow.com/questions/12430208/using-a-prepared-statement-and-variable-bind-order-by-in-java-with-jdbc-driver)  [参考2](https://www.jianshu.com/p/643866408bb7)    
     >4. [mybatis相关](http://www.cnblogs.com/friends-wf/p/4227999.html)  
-1. 团队越来越大数据库连接不够用，问题怎么解决？:答:部署一个远程的jndi数据库，大家公用一个jndi datasource。   
+1. 团队越来越大数据库连接不够用，问题怎么解决？:答:部署一个远程的jndi数据库，大家公用一个jndi datasource(tomcat 不支持远程jndi需要用jboss或其他的j2ee容器[参考](https://blog.csdn.net/tengdazhang770960436/article/details/16356205))。   
 1. jndi datasource和普通datasource的优缺点:  
     >1. 优点  
     >>1. 应用中不用引用jdbcdriver(个人认为意义不大)  
