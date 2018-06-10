@@ -27,11 +27,11 @@
 1. 团队越来越大数据库连接不够用，问题怎么解决？:答:部署一个远程的jndi数据库，大家公用一个jndi datasource。   
 1. jndi datasource和普通datasource的优缺点:  
     >1. 优点  
-        >>1. 应用中不用因为jdbcdriver(个人认为意义不大)  
-        >>2. 多个应用公用一个连接池，数据库的连接不够用的时候非常有用。  
-        >>2. 应用中不用关心datasource的配置，dev,test,prod多个环境没有区别。
-        >>4. 支持XA事务。`?????` 
+        >> 1. 应用中不用因为jdbcdriver(个人认为意义不大)  
+        >> 2. 多个应用公用一个连接池，数据库的连接不够用的时候非常有用。  
+        >> 2. 应用中不用关心datasource的配置，dev,test,prod多个环境没有区别。
+        >> 4. 支持XA事务。`?????` 
     >2. 缺点  
-        >>1. 需要servlet容器部署jdbcdatasource  
+        >> 1. 需要servlet容器部署jdbcdatasource  
 
 
