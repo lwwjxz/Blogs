@@ -1,5 +1,5 @@
 1. 安装登录   
-  >SSH分客户端openssh-client和openssh-server  
+    >SSH分客户端openssh-client和openssh-server  
   如果你只是想登陆别的机器的SSH只需要安装openssh-client（ubuntu有默认安装，如果没有则sudo   
   apt-get install openssh-client），如果要使本机开放SSH服务就需要安装openssh-server   
   sudo apt-get install openssh-server  
