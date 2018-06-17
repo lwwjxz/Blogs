@@ -21,6 +21,7 @@
     生成ssh key的时候，可以通过 -f 选项指定生成文件的文件名，如下:    
     `ssh-keygen -f filename   -C "注释"`不设置filename为默认名字`id_rsa`和`id_rsa.pub`    
     如果生成中要设置密码每次使用的时候都需要密码(没实践过)   
+    多对秘钥存在时选择秘钥`ssh -i ~/.ssh/liyddsshkey developer@192.168.1.237 -p 23`  `-i`指定秘钥  `-p`指定端口   
     [使用 SSH config 文件](http://daemon369.github.io/ssh/2015/03/21/using-ssh-config-file)   
     
 1. 
