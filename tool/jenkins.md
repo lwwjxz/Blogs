@@ -4,7 +4,7 @@
 1. 执行mvn命令的时候需要在安装jenkins的机器上安装maven并设置好环境变量(获取环境变量可能有问题，主要是shell的登录和非登录，交互和非交互模式造成的)  
 1. 在Credentials中是指密码或者私钥等。   
 1. 设置ssh server配置 系统管理-》系统设置中配置。  
-    >1. Source files的配置根据ant 的模式选择文件，规则  
+    >1. Source files的配置根据ant 的模式选择文件(如果不需要传输文件则Source File 和 Remove prefix 设置成一样即可)，规则  
     
     
         
@@ -24,6 +24,9 @@
     /app/\*\*/dir/file.	|匹配(Matches) /app/dir/file.jsp, /app/foo/dir/file.html,/app/foo/bar/dir/file.pdf, 和 /app/dir/file.java	 
     /\*\*/\*.jsp	|匹配(Matches)任何的.jsp 文件	
     
+    >1. Remove prefix 需要排除的文件的描述   
+
+
     
 
 
