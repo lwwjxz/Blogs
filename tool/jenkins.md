@@ -14,6 +14,15 @@
     \* |  匹配0或者任意数量的字符
     \*\* |  匹配0或者更多的目录  
     
+    >1. 示例  
+    
+    Path	| Description	
+    ---- | ---
+    /app/\*.x	|匹配(Matches)所有在app路径下的.x文件	 
+    /app/p?ttern	|匹配(Matches) /app/pattern 和 /app/pXttern,但是不包括/app/pttern	 
+    /\*\*/example	|匹配(Matches) /app/example, /app/foo/example, 和 /example	 
+    /app/\*\*/dir/file.	|匹配(Matches) /app/dir/file.jsp, /app/foo/dir/file.html,/app/foo/bar/dir/file.pdf, 和 /app/dir/file.java	 
+    /\*\*/\*.jsp	|匹配(Matches)任何的.jsp 文件	
     
     
 
