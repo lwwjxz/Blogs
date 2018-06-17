@@ -13,4 +13,10 @@
   sudo /etc/init.d/ssh start   
 1. ssh默认不允许root用户登录。如果需要让root登录则需要修改配置文件 `/etc/ssh/sshd_config` ，修改PermitRootLogin的值为`PermitRootLogin no`
 或者删除该配置项。   
+1. ssh-keygen 基本用法   
+    >使用 `ssh-kengen` 会在~/.ssh/目录下生成两个文件，不指定文件名和密钥类型的时候，默认生成的两个文件是：  
+    id_rsa   
+    id_rsa.pub   
+    第一个是私钥文件，第二个是公钥文件。   
+    
 
