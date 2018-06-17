@@ -6,7 +6,7 @@
 1. 设置ssh server配置 系统管理-》系统设置中配置。  
     >1. Source files的配置根据ant 的模式选择文件，规则  
     
-     >Wildcard | Description
+     Wildcard | Description
      ---- | ---
      ？ | 匹配任何单字符
      \* |  匹配0或者任意数量的字符
