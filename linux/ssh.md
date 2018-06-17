@@ -11,5 +11,4 @@
   然后重启SSH服务：   
   sudo /etc/init.d/ssh stop   
   sudo /etc/init.d/ssh start   
-
 1. ssh默认不允许root用户登录。
