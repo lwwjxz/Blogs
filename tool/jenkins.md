@@ -4,12 +4,15 @@
 1. 执行mvn命令的时候需要在安装jenkins的机器上安装maven并设置好环境变量(获取环境变量可能有问题，主要是shell的登录和非登录，交互和非交互模式造成的)  
 1. 在Credentials中是指密码或者私钥等。   
 1. 设置ssh server配置 系统管理-》系统设置中配置。  
-    >1. Source files的配置根据ant 的模式选择文件，规则   
+    >1. Source files的配置根据ant 的模式选择文件，规则  
+    
     Wildcard | Description
     ---- | ---
     ？ | 匹配任何单字符
     * |  匹配0或者任意数量的字符
     ** |  匹配0或者更多的目录  
+    
+    
     
 
 
