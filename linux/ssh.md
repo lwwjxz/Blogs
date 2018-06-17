@@ -11,4 +11,6 @@
   然后重启SSH服务：   
   sudo /etc/init.d/ssh stop   
   sudo /etc/init.d/ssh start   
-1. ssh默认不允许root用户登录。
+1. ssh默认不允许root用户登录。如果需要让root登录则需要修改配置文件 `/etc/ssh/sshd_config` ，修改PermitRootLogin的值为`PermitRootLogin no`
+或者删除该配置项。   
+
