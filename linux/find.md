@@ -186,5 +186,5 @@ find dir -name filename -print | cpio -pdv newdir
 
 
 6)查找2004-11-30 16:36:37时更改过的文件    
-# A=`find ./ -name "*php"` | ls -l --full-time $A 2>/dev/null | grep "2004-11-30 16:36:37"    
+ A=`find ./ -name "*php"` | ls -l --full-time $A 2>/dev/null | grep "2004-11-30 16:36:37"    
 
