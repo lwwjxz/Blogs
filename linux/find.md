@@ -5,9 +5,9 @@
 
 这里摘抄如下：
 
-·find path -option [ -print ] [ -exec -ok command ] {} \;  
+·find path -option [ -print ] [ -exec -ok command ] {} \\;  
 #-print 将查找到的文件输出到标准输出  
-#-exec command {} \;     -----将查到的文件执行command操作,{} 和 \;之间有空格  
+#-exec command {} \\;     -----将查到的文件执行command操作,{} 和 \\;之间有空格  
 #-ok 和-exec相同，只不过在操作前要询用户  
 
 ====================================================  
@@ -60,7 +60,7 @@ $find .   -name "[A-Z]*" -print #查以大写字母开头的文件
 $find /etc -name "host*" -print #查以host开头的文件  
 $find . -name "[a-z][a-z][0--9][0--9].txt"   -print   #查以两个小写字母和两个数字开头的txt文件  
 $find . -perm 755 -print  
-$find . -perm -007 -exec ls -l {} \; #查所有用户都可读写执行的文件同-perm 777  
+$find . -perm -007 -exec ls -l {} \\; #查所有用户都可读写执行的文件同-perm 777  
 $find . -type d -print  
 $find . ! -type d -print   
 $find . -type l -print  
@@ -71,7 +71,7 @@ $find . -size +10 -print             #查长度超过期作废10块的文件（1
 
 $cd /  
 $find etc home apps   -depth -print | cpio -ivcdC65536 -o /dev/rmt0  
-$find /etc -name "passwd*" -exec grep "cnscn" {} \; #看是否存在cnscn用户  
+$find /etc -name "passwd*" -exec grep "cnscn" {} \\; #看是否存在cnscn用户  
 $find . -name "yao*" | xargs file  
 $find . -name "yao*" | xargs echo   "" > /tmp/core.log  
 $find . -name "yao*" | xargs chmod o-w  
@@ -104,8 +104,8 @@ find /home -size +512k               查大于512k的文件
 find /home -size -512k               查小于512k的文件  
 find /home -links +2                 查硬连接数大于2的文件或目录  
 find /home -perm 0700                查权限为700的文件或目录  
-find /tmp -name tmp.txt -exec cat {} \;  
-find /tmp -name tmp.txt -ok rm {} \;  
+find /tmp -name tmp.txt -exec cat {} \\;  
+find /tmp -name tmp.txt -ok rm {} \\;  
 
 find   / -amin   -10       # 查找在系统中最后10分钟访问的文件  
 find   / -atime -2         # 查找在系统中最后48小时访问的文件  
@@ -119,7 +119,7 @@ find   / -user   fred       #查找在系统中属于FRED这个用户的文件
 查当前目录下的所有普通文件   
 --------------------------------------------------------------------------------  
 
-\# find . -type f -exec ls -l {} \;    
+\# find . -type f -exec ls -l {} \\;    
 -rw-r--r--    1 root     root        34928 2003-02-25 ./conf/httpd.conf     
 -rw-r--r--    1 root     root        12959 2003-02-25 ./conf/magic     
 -rw-r--r--    1 root     root          180 2003-02-25 ./conf.d/README     
@@ -128,20 +128,20 @@ find   / -user   fred       #查找在系统中属于FRED这个用户的文件
 
 =================================================    
 在/ l o g s目录中查找更改时间在5日以前的文件并删除它们：    
-$ find logs -type f -mtime +5 -exec -ok rm {} \;    
+$ find logs -type f -mtime +5 -exec -ok rm {} \\;    
 
 
 =================================================    
 查询当天修改过的文件    
-[root@book class]# find ./ -mtime -1 -type f -exec ls -l {} \;    
+[root@book class]# find ./ -mtime -1 -type f -exec ls -l {} \\;    
     
 
 =================================================    
 查询文件并询问是否要显示    
-[root@book class]# find ./ -mtime -1 -type f -ok ls -l {} \;     
+[root@book class]# find ./ -mtime -1 -type f -ok ls -l {} \\;     
 < ls ... ./classDB.inc.php > ? y    
 -rw-r--r--    1 cnscn    cnscn       13709 1月 12 12:22 ./classDB.inc.php    
-[root@book class]# find ./ -mtime -1 -type f -ok ls -l {} \;     
+[root@book class]# find ./ -mtime -1 -type f -ok ls -l {} \\;     
 < ls ... ./classDB.inc.php > ? n    
 [root@book class]#    
 
@@ -167,11 +167,11 @@ sda1
 
 A) find /tmp -name "*.h" | xargs -n50 grep SYSCALL_VECTOR    
 B) grep SYSCALL_VECTOR /tmp/*.h | cut   -d':' -f1| uniq > filename    
-C) find /tmp -name "*.h" -exec grep "SYSCALL_VECTOR" {} \; -print    
+C) find /tmp -name "*.h" -exec grep "SYSCALL_VECTOR" {} \\; -print    
 
 
-2)find / -name filename -exec rm -rf {} \;    
-find / -name filename -ok rm -rf {} \;    
+2)find / -name filename -exec rm -rf {} \\;    
+find / -name filename -ok rm -rf {} \\;    
 
 
 3)比如要查找磁盘中大于3M的文件：    
