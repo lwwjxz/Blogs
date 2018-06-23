@@ -18,7 +18,7 @@
 1. 热部署。  
 1. 系统设计。  
 1. dubbo springCloud。  
-1. 流程图。  
+1. 流程图 https://www.zhihu.com/question/27440059。    
 1. web容器性能调优。  
 1. dubbo，springBoot。  
 1. review， 新人辅导。  代码整洁之道。   
