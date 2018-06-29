@@ -44,5 +44,5 @@ Caused by: java.lang.IllegalArgumentException: 1
 	... 3 more
 ```
 
-NullPointerException丢失异常堆栈信息[参考](https://blog.csdn.net/taotao4/article/details/43918131)  
+NullPointerException丢失异常堆栈信息[参考](https://blog.csdn.net/taotao4/article/details/43918131)，加虚拟机参数-XX:-OmitStackTraceInFastThrow后就不会出现该问题
 
