@@ -41,4 +41,6 @@
             / usr / bin / java是生成核心转储的java二进制版本的路径   
             core.1234是您的常规核心文件。 一般1234就是PID。   
      1. 示例`jmap -dump:format=b,file=/xxxx/xxxx/xxx/filename 56466` 其中file参数指定生成文件的路径，如存在则不生成。  
+1. jhat: dump文件分析工具，一般不用应为Eclipse的MAT最好用。   
+    注意: 由于dump文件很大一般在64位JDK大内存的服务器上进行。   
     
