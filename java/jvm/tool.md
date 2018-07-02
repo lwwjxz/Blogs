@@ -19,7 +19,7 @@
     jinfo 有修改一部分运行期可写的虚拟机参数值。   
 1. jmap:用于生成java堆内存快照    
     1. 除了该方法外还有以下方法可以生成堆内存快照   
-    >增加启动参数 -XX:+HeapDumpOnOutOfMemoryError 【以下为猜测】应该不会出现性能问题因为已经OOM了，应用已经不能对外提供服务了就谈不上性能了。   
+        >增加启动参数 -XX:+HeapDumpOnOutOfMemoryError 【以下为猜测】应该不会出现性能问题因为已经OOM了，应用已经不能对外提供服务了就谈不上性能了。   
     增加启动参数 -XX:+HeapDumpOnCtrlBreak  
     kill -3发出进程退出信号
     1. 风险提示   
