@@ -23,17 +23,17 @@
     增加启动参数 -XX:+HeapDumpOnCtrlBreak  
     kill -3发出进程退出信号
     1. 风险提示   
-    最主要的危险操作是下面这三种： 
-        1. jmap -dump 
+        1. 最主要的危险操作是下面这三种： 
+            1. jmap -dump 
 这个命令执行，JVM会将整个heap的信息dump写入到一个文件，heap如果比较大的话，就会导致这个过程比较耗时，并且执行的过程中为了保证dump的信息是可靠的，所以会暂停应用。
 
-        2. jmap -permstat 
+            2. jmap -permstat 
 这个命令执行，JVM会去统计perm区的状况，这整个过程也会比较的耗时，并且同样也会暂停应用。
 
-        3. jmap -histo:live 
+            3. jmap -histo:live 
 这个命令执行，JVM会先触发gc，然后再统计信息。
-
 上面的这三个操作都将对应用的执行产生影响，所以建议如果不是很有必要的话，不要去执行。
-    1. 分析规避  
-另外，在排查问题的时候，对于保留现场信息的操作，可以用gcore [pid]直接保留，这个的执行速度会比jmap -dump快不少，之后可以再用jmap/jstack等从core dump文件里提取相应的信息，不过这个操作建议大家先测试下，貌似在有些jdk版本上不work。
+  
+        1. 另外，在排查问题的时候，对于保留现场信息的操作，可以用gcore [pid]直接保留，这个的执行速度会比jmap -dump快不少，之后可以再用jmap/jstack等从core dump文件里提取相应的信息，不过这个操作建议大家先测试下，貌似在有些jdk版本上不work。    
+     1. 示例`jmap -dump:format=b,file=/xxxx/xxxx/xxx/filename 56466` 其中file参数指定生成文件的路径，如存在则不生成。  
     
