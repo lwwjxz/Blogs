@@ -34,6 +34,11 @@
 这个命令执行，JVM会先触发gc，然后再统计信息。
 上面的这三个操作都将对应用的执行产生影响，所以建议如果不是很有必要的话，不要去执行。
   
-        1. 另外，在排查问题的时候，对于保留现场信息的操作，可以用gcore [pid]直接保留，这个的执行速度会比jmap -dump快不少，之后可以再用jmap/jstack等从core dump文件里提取相应的信息，不过这个操作建议大家先测试下，貌似在有些jdk版本上不work。    
+        1. 另外，在排查问题的时候，对于保留现场信息的操作，可以用gcore [pid]直接保留，这个的执行速度会比jmap -dump快不少，之后可以再用jmap/jstack等从core dump文件里提取相应的信息，不过这个操作建议大家先测试下，貌似在有些jdk版本上不work。 
+            >用gcore或gdb创建了核心转储，那么你需要将其转换为一个称为HPROF文件的东西。这些可以由VisualVM，Netbeans或Eclipse的内存分析器工具(以前称为SAP内存分析器)使用。我会推荐Eclipse MAT。要转换文件，请使用命令行工具jmap。    
+            `jmap -dump:format=b,file=dump.hprof /usr/bin/java core.1234`   
+            dump.hprof是要创建的hprof文件的名称   
+            / usr / bin / java是生成核心转储的java二进制版本的路径   
+            core.1234是您的常规核心文件。 一般1234就是PID。   
      1. 示例`jmap -dump:format=b,file=/xxxx/xxxx/xxx/filename 56466` 其中file参数指定生成文件的路径，如存在则不生成。  
     
