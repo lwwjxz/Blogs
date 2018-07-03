@@ -48,5 +48,5 @@
     1. http://www.ccblog.cn/84.htm  文章中的工具没找到，线程的dump文件也没有生成不过文章讲的原来可以参考下。   
 1. HSDIS:JIT生成代码反汇编，暂时先不考虑学习该工具。  
 1. VisualVM [设置方法](http://blog.51cto.com/lizhenliang/1608005)   
->ps 一定要`-Djava.rmi.server.hostname=192.168.1.156`第一次调试的时候忘了加搞了好久没连上。     
+>ps 一定要加`-Djava.rmi.server.hostname=192.168.1.156`第一次调试的时候忘了加搞了好久没连上。     
     
