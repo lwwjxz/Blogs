@@ -2,6 +2,7 @@
 1. 初级`==` 和 `equels` 的区别。  
 1. String,StringBuffer和StringBuild的区别。    
 1. 精位运算：原则是使用BigDecimal并且一定要用String来够造。   
+1. 计算相关的四舍五入有问题，怎么避免。   
 ```
 BigDecimal bg1 = new BigDecimal(0.9);  
 BigDecimal bg2 = new BigDecimal(1.0);  
