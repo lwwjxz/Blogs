@@ -1,9 +1,10 @@
 # 最初级
 1. 初级`==` 和 `equels` 的区别。  
-1. String,StringBuffer和StringBuild的区别。    
+1. String,StringBuffer和StringBuild的区别。   
 1. 精位运算：原则是使用BigDecimal并且一定要用String来够造。   
-1. 银行家舍入发收入和支出方之间结算的时候有用。
+1. 银行家舍入发收入和支出方之间结算的时候有用。    
 1. 分账的时候就收最后一个参与者收到的钱是总数-其他参与者的总和，避免 `20 / 3 = 6.67 , 6.67*3=20.01>20`的问题。   
+1. Object.toString() 方法@后面是什么意思。  
 1. hashcode()  和 equals() 方法：   
     1. 如果两个对象根据equals方法比较是相等的，那么调用两个对象的hashCode方法必须返回相同的整数结果。  
     1. 如果两个对象根据equals方法比较是不等的，则hashCode方法不一定得返回不同的整数。
