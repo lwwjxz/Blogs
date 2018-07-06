@@ -35,7 +35,5 @@ System.out.println(bg4.subtract(bg3));//输出0.1
 1. 订单提交的例子怎么记录日志，     
 1. 设计一个给商家结算的功能，主要考察要不要记录操作日志。记在哪？    
 1. 重复提交     
-1. 
+1. mybatis #和$ 的区别预编译的好处？    
 
-
-为什么当前读的条件为非聚簇索引时都要锁住对应的聚簇索引？因为如果聚簇所以指向真正的数据，如果不加锁其他的事务也可以读取数据并进行修改就会并发的修改同一条数据，产生竞态条件。比如table.id为聚簇索引，table.name 不是索引，table.phone为唯一索引，有一条数据 id= 1 age = 1 ,phone = 5 update set age = age+1 where phone = 5 ，如果不锁聚簇索引 事务 update set age = age+1 where id =1 ，这两个事务能同事执行，最后age的值无法预测，有可能是2也有可能是3
