@@ -35,5 +35,5 @@ System.out.println(bg4.subtract(bg3));//输出0.1
 1. 订单提交的例子怎么记录日志，     
 1. 设计一个给商家结算的功能，主要考察要不要记录操作日志。记在哪？    
 1. 重复提交     
-1. mybatis #和$ 的区别预编译的好处？[参考](https://blog.csdn.net/lirx_tech/article/details/51148853)       
-
+1. mybatis #和$ 的区别预编译的好处？[参考](https://blog.csdn.net/lirx_tech/article/details/51148853)     
+    > like的最近实践预编译  `select * from user where name like "%"#{name}"%" `     
