@@ -37,3 +37,5 @@ System.out.println(bg4.subtract(bg3));//输出0.1
 1. 重复提交     
 1. mybatis #和$ 的区别预编译的好处？[参考](https://blog.csdn.net/lirx_tech/article/details/51148853)     
     > like的最近实践预编译  `select * from user where name like "%"#{name}"%" `     
+    
+1. innoDB数据引擎。  
