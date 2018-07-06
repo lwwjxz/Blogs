@@ -39,3 +39,15 @@ System.out.println(bg4.subtract(bg3));//输出0.1
     > like的最近实践预编译  `select * from user where name like "%"#{name}"%" `     
     
 1. innoDB数据引擎。  
+jvm 垃圾回收机制，-server的作用，垃圾回收日志。
+
+1. dubbo   
+    1. 直连
+    1. 负载均衡
+    1. 容错模式   
+    1. 协议   
+1. 消息中间件作用
+    1. 异构集成。  
+    1. 解耦。  
+    1. 点对点能不能有多个监听，多个监听情况下会不会重复消费。  
+    1. group消息分组。    
