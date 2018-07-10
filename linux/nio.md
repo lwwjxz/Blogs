@@ -12,5 +12,5 @@
         1. epoll 现在不仅告诉你sock组里面数据，还会告诉你具体哪个sock有数据，你不用自己去找了。   
     1. 性能高测试   
     ![](https://github.com/lwwjxz/Blogs/blob/master/image/5a56c4677da1c10153ed22a3f6dfeab4_hd.png)     
-    横轴Dead connections 就是链接数的意思，叫这个名字只是它的测试工具叫deadcon. 纵轴是每秒处理请求的数量，你可以看到，epoll每秒处理请求的数量基本     不会随着链接变多而下降的。poll 和/dev/poll 就很惨了。
+    横轴Dead connections 就是链接数的意思，叫这个名字只是它的测试工具叫deadcon. 纵轴是每秒处理请求的数量，你可以看到，epoll每秒处理请求的数量基本     不会随着链接变多而下降的。poll 和/dev/poll 就很惨了。    
     `可是epoll 有个致命的缺点。。只有linux支持。比如BSD上面对应的实现是kqueue。`
