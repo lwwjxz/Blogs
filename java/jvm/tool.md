@@ -48,5 +48,7 @@
     1. http://www.ccblog.cn/84.htm  文章中的工具没找到，线程的dump文件也没有生成不过文章讲的原来可以参考下。   
 1. HSDIS:JIT生成代码反汇编，暂时先不考虑学习该工具。  
 1. VisualVM [设置方法](http://blog.51cto.com/lizhenliang/1608005)   
->ps 一定要加`-Djava.rmi.server.hostname=192.168.1.156`第一次调试的时候忘了加搞了好久没连上。     
+>ps 一定要加`-Djava.rmi.server.hostname=192.168.1.156`第一次调试的时候忘了加搞了好久没连上。   
+1. [eclipse MAT用法 ](https://blog.csdn.net/wanghuiqi2008/article/details/50724676)   
+1. [内存分析工具 MAT 的使用](https://blog.csdn.net/aaa2832/article/details/19419679)    
     
