@@ -4,7 +4,7 @@
     1. 可达性分析法：当一个对象到GC Roots 间没有任何引用链则认为该对象已死。在java中GC Roots 包括下面几种:    
         1. 栈中引用的对象。  
         1. 方法区中类静态属性引用的对象。`static String`   
-        1. 方法区中常量引用的对象。`static final String`   
+        1. 方法区中常量引用的对象。`static final String`,`"name",5 等常量`   
         1. 本地方法栈中JNI(即Native方法引用的对象)   
     1. JDK1.2 后把引用分为强引用，软引用，弱引用和虚引用。关于虚引用的理解[参考](http://www.importnew.com/21206.html)中的WHY 和 HOW。   
     1. 不可达不一定会被回收，还需要被认定的不需要执行finalize()方法。如果执行过才会回收。   
