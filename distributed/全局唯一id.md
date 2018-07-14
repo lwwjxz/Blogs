@@ -13,8 +13,15 @@
 1. [高并发分布式系统中生成全局唯一Id汇总](https://www.cnblogs.com/baiwa/p/5318432.html)        
 1. [Leaf——美团点评分布式ID生成系统](https://tech.meituan.com/MT_Leaf.html?utm_source=tool.lu)      
         1. uuid： 太长，无序，信息不安全(可能暴露mac地址)    
-        1. snowflake：时钟回拨会导致id重复[闰秒](https://coolshell.cn/articles/7804.html)[闰秒对应的处理](https://www.zhihu.com/question/21504563) 可能有些机器处理闰秒不太规范前一秒和本秒的时间戳是一样的。如果出现时间回拨(闰秒的时间戳跟前一秒的一样的)怎么处理。                
+        1. snowflake：时钟回拨会导致id重复[闰秒](https://coolshell.cn/articles/7804.html)[闰秒对应的处理](https://www.zhihu.com/question/21504563) 可能有些机器处理闰秒不太规范前一秒和本秒的时间戳是一样的。如果出现时间回拨(闰秒的时间戳跟前一秒的一样的)怎么处理。对于时钟回拨的问题snowflake的处理方法是直接抛出异常 ，ntp时间戳。              
         1. 设置数据库的步长和起始值:水平扩展比较困难，id没有单调递增，只是趋势递增，数据库压力很大。   
         ps `猜想：单调递增:严格的递增，  趋势递增：大趋势是递增的有时候肯能不是递增的`   
+        
+        
+1. 比较简单实现方法，没有考虑时间回拨[基于redis的分布式ID生成器](https://github.com/hengyunabc/redis-id-generator)    
+        1. [eval 和 evalsha](http://redisdoc.com/script/eval.html)      
+        1. [redis time ](http://redisdoc.com/server/time.html)      
+        
+        
 
 
