@@ -27,5 +27,27 @@
         post = {"title":"题目","post":"内容"};
         db.blog.insert(post);
         
+        
+        insertFunction = function(){
+            for(var i=0 ;i<1000000;i++){
+            db.collectionName.insert({"foo":"bar"});
+            }
+        };
+          
+        insertFunction();
+        ```  
+     1. update   
         ```
+        post.comments=[];    
+        db.blog.update({"title":"题目"},post);
+        
+        ```   
+     1. 执行脚本`mongo --quiet ip:port/dbBase  script1.js script2.js`    
+     1. .mongorc.js启动shell默认执行。   
+     1. ······
+1. json 只有null,布尔,数字,字符串,数组和对象六中数据类型。 而bson增加了很多数据类型。      
+1. ObjectId：因为在多台服务器上同步自动增加主键即费力又费时。所用下面的方式`4个字节时间戳|3个字节的主机标识|2个字节的PID|3个字节的计数器`        
+1. ObjectId：是在客户端生成的(因为`服务端能不做就不做的原则`)      
+1. 文档的大小限制，目前最多为16MB  ,查看文档的大小`Object.bsonize(doc)` 整部战争与和平也才3.14MB.   
+1. insert是校验。 有没有_id字段没有的话自动生成，有没有大于16兆，类型是否支持。校验是在客户端做的，还是因为`服务端能不做就不做的原则`    
 1. 
