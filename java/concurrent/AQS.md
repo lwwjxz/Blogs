@@ -1,0 +1,15 @@
+1. [参考](https://www.cnblogs.com/waterystone/p/4920797.html)    
+    1. 自旋锁会消耗CPU自由在确定能快速获得锁的场景才适合使用自旋锁，AQS中的addWaiter方法就比较适合自旋因为往tail添加一个节点是一个非常轻量级的操作所以
+    不会阻塞太长时间。   
+    1. 为什么需要selfInterrupt()因为如果Thread.currentThread().isInterrupted()为true时LockSupport.park();方法无效。所以要用Thread.interrupted();
+    清除掉并用selfInterrupt()重新设置。      
+    1. synchronized 和 AQS的区别      
+        1. 功能丰富，synchronized只是个非公平锁。synchronized功能单一相当于一个不公平的可重入锁，很难满足各种各样的场景。  
+        1. synchronized是重量级锁而AQS用的LockSupport.park()比较轻量级。   
+        1. 没有性能问题，满足使用场景时应该使用synchronized因为[参考](https://blog.csdn.net/fw0124/article/details/6672522)     
+            1. 用起来简单。   
+            1. synchronized 相比于Lock不用在finally代码块中释放锁。    
+            1. 当 JVM 用 synchronized 管理锁定请求和释放时，JVM 在生成线程转储时能够包括锁定信息。这些对调试非常有价值，因为它们能标识死锁或者其他异常行为的来源。 Lock 类只是普通的类，JVM 不知道具体哪个线程拥有 Lock 对象。     
+            
+    
+    
