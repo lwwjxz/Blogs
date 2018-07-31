@@ -24,7 +24,7 @@
     多对秘钥存在时选择秘钥`ssh -i ~/.ssh/liyddsshkey developer@192.168.1.237 -p 23`  `-i`指定秘钥  `-p`指定端口   
     [使用 SSH config 文件](http://daemon369.github.io/ssh/2015/03/21/using-ssh-config-file)   
     
-1. 
+1. 指定私钥登录 `ssh -i ~/.ssh/id_rsa_new root@10.0.20.10 -p 22` 有可能报 id_rsa_new的权限太open，`chmod 400` 就好了。   
     
     
 
