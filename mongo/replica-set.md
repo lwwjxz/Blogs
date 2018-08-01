@@ -17,3 +17,4 @@
 1. 默认情况下secondary节点会拒绝读请求和写请求，查询会报`not master`错误。   
 1. connectionxxxxx.setSlaveOk()方法可以设置获取对sencondary的读取权限。该方法是对connection的不是对数据库的。secendary不能数据。   
 1. replica-set模式下关闭副本集  replicaSet.stopSet()。   
+1. 未完  书签; 页面199
