@@ -1,6 +1,8 @@
 1. [参考](http://www.cnblogs.com/yulinfeng/p/6874240.html)     
     1. 这个在AQS定义的方法`tryAcquire`表示该方法保证线程安全的获取同步状态   
-    1. `enq(final Node node)`方法中的compareAndSetHead不太理解为什么要初始化一个空的Node，而不是直接将当期Node指向head和tail。   
+    1. `enq(final Node node)`方法中的compareAndSetHead不太理解为什么要初始化一个空的Node，而不是直接将当期Node指向head和tail？ 
+    原因还不清楚但是以下实时有利于理解
+        1. acquireQueued方法中判断前一个节点是head就去tryacquire因为有可能是前一个节点调用的unpark方法。
     1. 终于知道为什么叫acquire和tryacquire了，因为acquire的就是通过不停的tryacquire来实现的。   
 1. [参考](https://www.cnblogs.com/waterystone/p/4920797.html)     
     1. 自旋锁会消耗CPU自由在确定能快速获得锁的场景才适合使用自旋锁，AQS中的addWaiter方法就比较适合自旋因为往tail添加一个节点是一个非常轻量级的操作所以不会阻塞太长时间。   
