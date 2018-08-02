@@ -9,4 +9,6 @@
     所以在你非常熟悉自己的代码前提下，大可禁用偏向锁。   
     1. 关闭偏向锁：偏向锁在Java 6和Java 7里是默认启用的，但是它在应用程序启动几秒钟之后才激活，如有必要可以使用JVM参数来关闭延迟 
     -XX：BiasedLockingStartupDelay = 0。如果你确定自己应用程序里所有的锁通常情况下处于竞争状态，可以通过JVM参数关闭偏向锁
-    -XX:-UseBiasedLocking=false，那么默认会进入轻量级锁状态。
+    -XX:-UseBiasedLocking=false，那么默认会进入轻量级锁状态。     
+1. 锁消除，锁粗化 [参考](https://blog.csdn.net/chenssy/article/details/54883355)    
+
