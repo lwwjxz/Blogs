@@ -100,10 +100,10 @@ security:
 ```
 
 1. 启动镜像    
-`docker run --name mongo1 -v 物理机路径/data/mongodb1:/data/db -p 27011:27017 -d mongo --config 物理机路径/mongod.conf`
-`docker run --name mongo2 -v 物理机路径/data/mongodb2:/data/db -p 27012:27017 -d mongo --config 物理机路径/mongod.conf`
-`docker run --name mongo3 -v 物理机路径/data/mongodb3:/data/db -p 27013:27017 -d mongo --config 物理机路径/mongod.conf`
-`docker run --name mongo4 -v 物理机路径/data/mongodb4:/data/db -p 27014:27017 -d mongo --config 物理机路径/mongod.conf`
+`docker run --name mongo1 -v 物理机路径/data/mongodb1:/data/db -p 27011:27017 -d mongo --config 物理机路径/mongod.conf`    
+`docker run --name mongo2 -v 物理机路径/data/mongodb2:/data/db -p 27012:27017 -d mongo --config 物理机路径/mongod.conf`    
+`docker run --name mongo3 -v 物理机路径/data/mongodb3:/data/db -p 27013:27017 -d mongo --config 物理机路径/mongod.conf`    
+`docker run --name mongo4 -v 物理机路径/data/mongodb4:/data/db -p 27014:27017 -d mongo --config 物理机路径/mongod.conf`     
 
 1. 初始化集群     
 ```
