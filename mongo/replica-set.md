@@ -84,6 +84,7 @@ operationProfiling:
   slowOpThresholdMs: 100
   mode: slowOp
 
+# 副本信息
 replication:
   oplogSizeMB: 10240
   replSetName: spock
@@ -99,10 +100,50 @@ security:
 `docker run --name mongo2 -v 物理机路径/data/mongodb2:/data/db -d mongo --config 物理机路径/mongod.conf`
 `docker run --name mongo3 -v 物理机路径/data/mongodb3:/data/db -d mongo --config 物理机路径/mongod.conf`
 
-1. 
+1. 初始化集群     
+```
+# 在shell中定义对象
+config={
+    "_id" : "rs",
+    "version" : 7,
+    "members" : [
+        {
+            "_id" : 0,
+            "host" : "m1.example.net:27017",
+            "priority" : 1
+        },
+        {
+            "_id" : 1,
+            "host" : "m2.example.net:27017",
+            "priority" : 0.5
+        },
+        {
+            "_id" : 2,
+            "host" : "m3.example.net:27017",
+            "priority" : 0.5
+        }
+    ]
+}
 
+#连接到其中一台server
+db=(new Mongo("ip:port")).getDB("test")
+
+
+rs.initiate(config)
+# 返回
+{
+"info":"~~~~~~~~~~~~",
+"ok":1
+}
+# 修改副本
+rs.add("ip:port")
+rs.remove("ip:port")
+# 查看当前配置
+rs.config() 
+
+```
+1. 设置好后多建几个库看能不能同步，确定副本模式是针对整个实例的还是针对库的？
 1. 建表。   
-建表。
 
 1. 导入数据。   
 1. 重启。   
