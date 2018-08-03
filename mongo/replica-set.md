@@ -7,13 +7,13 @@ FROM mongo:3
 # MAINTAINER
 MAINTAINER lian
 # 更新软件开库
-apt-get update
+RUN apt-get update
 # 安装Procps
-apt-get install Procps
+RUN apt-get install Procps
 # 安装net-tools
-apt-get install net-tools   
+RUN apt-get install net-tools   
 # 安装inetutils-ping 
-apt-get install inetutils-ping
+RUN apt-get install inetutils-ping
 ```
 1. 部署replica-set模式。  
 `xxx@server1$ mongod --replSet name -f mongod.conf --fork`     
