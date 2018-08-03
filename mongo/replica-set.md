@@ -13,8 +13,12 @@ RUN apt-get install Procps
 # 安装net-tools
 RUN apt-get install net-tools   
 # 安装inetutils-ping 
-RUN apt-get install inetutils-ping
+RUN apt-get install iputils-ping -y
 ```
+构建镜像   
+`docker pull mongo:3` 生产用的是3.0.15所以此处用3作为基础镜像。   
+`docker build -t mongo-lian:version1 .`   
+
 1. 部署replica-set模式。  
 `xxx@server1$ mongod --replSet name -f mongod.conf --fork`     
 `xxx@server2$ mongod --replSet name -f mongod.conf --fork`     
@@ -56,7 +60,7 @@ storage:
   engine: wiredTiger  #启用WT引擎
   wiredTiger:
     engineConfig:
-      cacheSizeGB: 10
+      cacheSizeGB: 10  #引擎使用的最多内存大小
       journalCompressor: snappy
       directoryForIndexes: true
     collectionConfig:
@@ -96,9 +100,10 @@ security:
 ```
 
 1. 启动镜像    
-`docker run --name mongo1 -v 物理机路径/data/mongodb1:/data/db -d mongo --config 物理机路径/mongod.conf`
-`docker run --name mongo2 -v 物理机路径/data/mongodb2:/data/db -d mongo --config 物理机路径/mongod.conf`
-`docker run --name mongo3 -v 物理机路径/data/mongodb3:/data/db -d mongo --config 物理机路径/mongod.conf`
+`docker run --name mongo1 -v 物理机路径/data/mongodb1:/data/db -p 27011:27017 -d mongo --config 物理机路径/mongod.conf`
+`docker run --name mongo2 -v 物理机路径/data/mongodb2:/data/db -p 27012:27017 -d mongo --config 物理机路径/mongod.conf`
+`docker run --name mongo3 -v 物理机路径/data/mongodb3:/data/db -p 27013:27017 -d mongo --config 物理机路径/mongod.conf`
+`docker run --name mongo4 -v 物理机路径/data/mongodb4:/data/db -p 27014:27017 -d mongo --config 物理机路径/mongod.conf`
 
 1. 初始化集群     
 ```
@@ -143,7 +148,7 @@ rs.config()
 
 ```
 1. 设置好后多建几个库看能不能同步，确定副本模式是针对整个实例的还是针对库的？
-1. 建表。   
+1.    
 
 1. 导入数据。   
 1. 重启。   
