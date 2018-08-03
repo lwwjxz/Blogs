@@ -94,6 +94,10 @@ security:
 
 ```
 
+1. 启动镜像    
+`docker run --name mongo1 -v 物理机路径/data/mongodb1:/data/db -d mongo --config 物理机路径/mongod.conf`
+`docker run --name mongo2 -v 物理机路径/data/mongodb2:/data/db -d mongo --config 物理机路径/mongod.conf`
+`docker run --name mongo3 -v 物理机路径/data/mongodb3:/data/db -d mongo --config 物理机路径/mongod.conf`
 
 1. 
 
