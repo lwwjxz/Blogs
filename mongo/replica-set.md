@@ -110,7 +110,7 @@ security:
 # 在shell中定义对象
 config={
     "_id" : "rs",
-    "version" : 7,
+    "version" : 1, #初始化时值只能是1
     "members" : [
         {
             "_id" : 0,
