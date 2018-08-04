@@ -1,3 +1,4 @@
+[参考](https://www.sohamkamani.com/blog/2016/06/30/docker-mongo-replica-set/)    
 1. 同步是实例级别的，即建库，建表的动作都会同步。   
 1. 查看当前公司用版本号。  
   `db.runCommand({"buildInfo":1}) `   结果:`3.0.15`   
