@@ -3,6 +3,6 @@
 对于内存监控，在top里我们要时刻监控第五行swap交换分区的used，如果这个数值在不断的变化，说明内核在不断进行内存和swap的数据交换，这是真正的`内存不够用`了。     
 1. CPU核数 = 物理CPU * 核心数。[参考](https://blog.csdn.net/dba_waterbin/article/details/8644626)   
 逻辑CPU = CPU核数 * n 如果开启超线程则n=2没开则n=1    
-1. 
+1. [查看线程](https://www.cnblogs.com/EasonJim/p/8098217.html)      
 
 
