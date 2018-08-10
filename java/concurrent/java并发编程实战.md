@@ -4,5 +4,7 @@ ThreadLocal变量就可以在任何时候用了。??ThreadLocal的实现，remov
       1. 每次使用完ThreadLocal，都调用它的remove()方法，清除数据。      
       1. 在使用线程池的情况下，没有及时清理ThreadLocal，不仅是内存泄漏的问题，更严重的是可能导致业务逻辑出现问题。所以，使用ThreadLocal就跟加锁完要解锁一样，用完就清理。
 1. queue中不能添加null因为移除操作需要通过返回的是不是null来判断有没有移除成功。     
-1. JDK5之前java线程即是工作单元也是执行机制。从JDK5开始，把工作单元与执行机制分离开来。工作单元包括Runnable和Callable，而执行机制有Executor框架提供。此处的执行机制猜测就是延时执行，定时执行，线程满了怎么办等
+1. JDK5之前java线程即是工作单元也是执行机制。从JDK5开始，把工作单元与执行机制分离开来。工作单元包括Runnable和Callable，而执行机制有Executor框架提供。此处的执行机制猜测就是延时执行，定时执行，线程满了怎么办等。   
+1. Executor是一个接口是Executor框架的基础，它将任务提交和任务执行分离开来。    
+1. 
 
