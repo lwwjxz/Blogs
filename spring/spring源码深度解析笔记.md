@@ -9,4 +9,4 @@
     1. Parser解析Element。    
 1. 配置文件解析，如果自定义的schema需要自定义解析器。需要自定义schema的时候可以参考。      
 1. FactoryBean。      
-1. 
+1. AOP是每次初始化bean完成后再生产代理类。   
