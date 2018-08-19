@@ -1,0 +1,1 @@
+1. 区别不大可以把Ubuntu Server看作是Desktop版本去掉GUI的产物
