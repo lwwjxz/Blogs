@@ -25,6 +25,11 @@
     [使用 SSH config 文件](http://daemon369.github.io/ssh/2015/03/21/using-ssh-config-file)   
     
 1. 指定私钥登录 `ssh -i ~/.ssh/id_rsa_new root@10.0.20.10 -p 22` 有可能报 id_rsa_new的权限太open，`chmod 400` 就好了。   
+1. 如果同一个ip对应的机器变了或者机器重装系统了重新去登陆的话会报错这时候需要把~/.ssh/known_hosts 相关ip的信息删掉。    
+1. ssh秘钥登录服务器端配置。
+    >1. 将客户端的供应scp到服务器。   
+     1. 使用`cat id_rsa.pub >>.ssh/authorized_keys`命令将公钥内容追加到authorized_keys文件中，authorized_keys文件不存在则先建文件。   
+     1. 客户端就可以用`ssh user@ip`直接登录了。  
     
     
 
