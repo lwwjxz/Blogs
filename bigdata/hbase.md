@@ -3,6 +3,7 @@
      1. [单机部署](https://blog.csdn.net/liuxinghao/article/details/40112431)      
      1. [单机部署](https://blog.csdn.net/fanghuainihao/article/details/78962873)      
      1. 部署中遇到的小问题。     
-          1. 需要修改配置文件中的JAVA_HOME `conf/hbase-env.sh`    
+          1. 需要修改配置文件中的JAVA_HOME `conf/hbase-env.sh`   
+     1. 控制台访问地址:http://ip:16010/master-status      
       
  
