@@ -4,11 +4,11 @@
     1. [hbase脚本](https://github.com/lwwjxz/Blogs/blob/master/java/apm/hbase-create.hbase)       
     1. hbase单机版搭建自带zk默认2181端口。     
     1. 把pinpointagent目录下 pinpoint.config 文件中 profiler.collector.ip 属性值修改为部署 collector 机器的主机名或 IP       
+    1. mysql和hbase二选一?[参考](https://blog.csdn.net/mingyu1016/article/details/53925611)     
     1. 应用启动脚本    
     ```
         java -javaagent:/home/junbaor/pinpoint-agent/pinpoint-bootstrap-1.6.2.jar -Dpinpoint.agentId=bbs-web-1 -Dpinpoint.applicationName=bbs-web -jar bbs-web-0.0.1-SNAPSHOT.jar
     ```    
-
     
     
  
