@@ -7,6 +7,8 @@
     ```
     java -javaagent:/home/junbaor/pinpoint-agent/pinpoint-bootstrap-1.6.2.jar -Dpinpoint.agentId=bbs-web-1 -Dpinpoint.applicationName=bbs-web -jar bbs-web-0.0.1-SNAPSHOT.jar
     ```    
+    1. 把pinpointagent目录下 pinpoint.config 文件中 profiler.collector.ip 属性值修改为部署 collector 机器的主机名或 IP
+
     
     
  
