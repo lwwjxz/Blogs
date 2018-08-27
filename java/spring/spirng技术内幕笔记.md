@@ -24,3 +24,24 @@
     1. BeanDefinition的载入。      
     1. BeanDefinition的注册。      
     
+    
+1. ClassPathXmlApplicationContext容器加载过程。  
+    1. AbstractRefreshableConfigApplicationContext#setConfigLocations 初始化系统信息比如jdk版本号，
+    1. ConfigurableEnvironment更父容器的ConfigurableEnvironment合并。     
+    1. AbstractRefreshableConfigApplicationContext设置xml配置文件路径。    
+    1. AbstractApplicationContext#prepareRefresh
+            1. 设置初始化时间，active状态等基本信息。    
+            1. 设置系统属性。    
+            1. 校验需要容器中需要的属性有没有加载到。    
+            1. AbstractApplicationContext#earlyApplicationEvents。    
+    1. AbstractApplicationContext#obtainFreshBeanFactory     
+            1. refreshBeanFactory       
+                1. 设置ignoredDependencyInterfaces        
+                1. 设置是否允许重写definition和是否循环依赖标志位。    
+                1. 加载beanDefinition(比较复杂的逻辑)。想要自定义schame需要从此次入手。    
+                1. prepareBeanFactory 实现BeanPostProcessor其中就有加载时植入。
+                1. BeanPostProcessor对象实例化后执行，BeanFactoryPostProcessor BeanFactory加载完后执行。    
+
+                
+            
+    
