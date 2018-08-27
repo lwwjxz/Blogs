@@ -38,9 +38,11 @@
             1. refreshBeanFactory       
                 1. 设置ignoredDependencyInterfaces        
                 1. 设置是否允许重写definition和是否循环依赖标志位。    
-                1. 加载beanDefinition(比较复杂的逻辑)。想要自定义schame需要从此次入手。    
-                1. prepareBeanFactory 实现BeanPostProcessor其中就有加载时植入。
-                1. BeanPostProcessor对象实例化后执行，BeanFactoryPostProcessor BeanFactory加载完后执行。    
+                1. 加载beanDefinition(比较复杂的逻辑)。想要自定义schame需要从此次入手。   
+                
+    1. prepareBeanFactory 实现BeanPostProcessor其中就有加载时植入。     
+    1. BeanPostProcessor对象实例化后执行，BeanFactoryPostProcessor BeanFactory加载完后执行。    
+    1. finishBeanFactoryInitialization 实例化饥饿加载单例bean除非设置了懒加载。   
 
                 
             
