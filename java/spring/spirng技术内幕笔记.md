@@ -42,8 +42,11 @@
                 
     1. prepareBeanFactory 实现BeanPostProcessor其中就有加载时植入。     
     1. BeanPostProcessor对象实例化后执行，BeanFactoryPostProcessor BeanFactory加载完后执行。    
-    1. finishBeanFactoryInitialization 实例化饥饿加载单例bean除非设置了懒加载。   
-
+    1. finishBeanFactoryInitialization 实例化饥饿加载单例bean除非设置了懒加载[参考](https://blog.csdn.net/u011734144/article/details/72632327)。   
+1. 单例并且是通过set方法循环依赖的才能解决。[参考](https://blog.csdn.net/u010644448/article/details/59108799)    
+    1. 单例set:spring先设置所有的对象然后再设置对象的属性。    
+    1. 单例构造函数不行。     
+    1. prototype不行因为spring不会对实例进行缓存。  
                 
             
     
