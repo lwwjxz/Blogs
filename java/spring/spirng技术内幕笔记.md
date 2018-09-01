@@ -6,7 +6,8 @@
 1. ListableBeanFactory: 除了父接口的方法还定义了一些获取beandefinition的方法。    
 1. AutowireCapableBeanFactory: 定义了一些获取注解信息的方法。   
 1. HierarchicalBeanFactory: 提供了获取父容器和判断是当前容器(不包括父容器)中的bean。   
-1. ConfigurableBeanFactory：较复杂获取指定bean的依赖，增加BeanPostProcessor等。    
+1. ConfigurableBeanFactory：较复杂获取指定bean的依赖，增加Bean
+Processor等。    
 1. BeanDefinition是对象依赖关系的抽象。     
 1. MessageSource可以做最为自己的应用字体设计message。[参考](http://elim.iteye.com/blog/2392583)     
 1. ResourceLoader 用来加载资源。    
@@ -46,7 +47,15 @@
 1. 单例并且是通过set方法循环依赖的才能解决。[参考](https://blog.csdn.net/u010644448/article/details/59108799)    
     1. 单例set:spring先设置所有的对象然后再设置对象的属性。    
     1. 单例构造函数不行。     
-    1. prototype不行因为spring不会对实例进行缓存。  
-                
+    1. prototype不行因为spring不会对实例进行缓存。                     
+1. AOP面向切面的编程。   
+1. 普通人员对优秀架构师的渴望，有了架构师，每个人都可以各自负责自己的“一亩三分地”日子会好过很多。    
+1. 面向对象的一个基本原则，让对象尽可能的靠近数据。     
+1. java字节码就是class文件。     
+1. Spring AOP也是对目标类增强，生成代理类。但是与AspectJ的最大区别在于---Spring AOP的运行时增强，而AspectJ是编译时增强。
+曾经以为AspectJ是Spring AOP一部分，是因为Spring AOP使用了AspectJ的Annotation。使用了Aspect来定义切面,使用Pointcut来定义切入点，使用Advice来定义增强处理。虽然使用了Aspect的Annotation，但是并没有使用它的编译器和织入器。其实现原理是JDK 动态代理，在运行时生成代理类。     
+1. JDK创建代理对象效率比CGLib高，而CGLib创建的代理对象运行效率比JDK的要高。[spring AOP入门](https://segmentfault.com/a/1190000003000515)   
+1. org.springframework.context.support.AbstractApplicationContext#refresh中调用org.springframework.context.support.AbstractApplicationContext#registerBeanPostProcessors时会把动态代理要代理的内容注册到org.springframework.beans.factory.support.AbstractBeanFactory#beanPostProcessors中让后在org.springframework.context.support.AbstractApplicationContext#finishBeanFactoryInitialization中调用org.springframework.beans.factory.config.ConfigurableListableBeanFactory#preInstantiateSingletons中执行动态代理的逻辑。
+
             
     
