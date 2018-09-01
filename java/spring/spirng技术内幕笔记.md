@@ -54,7 +54,7 @@ Processor等。
 1. java字节码就是class文件。     
 1. Spring AOP也是对目标类增强，生成代理类。但是与AspectJ的最大区别在于---Spring AOP的运行时增强，而AspectJ是编译时增强。
 曾经以为AspectJ是Spring AOP一部分，是因为Spring AOP使用了AspectJ的Annotation。使用了Aspect来定义切面,使用Pointcut来定义切入点，使用Advice来定义增强处理。虽然使用了Aspect的Annotation，但是并没有使用它的编译器和织入器。其实现原理是JDK 动态代理，在运行时生成代理类。     
-1. JDK创建代理对象效率比CGLib高，而CGLib创建的代理对象运行效率比JDK的要高。[spring AOP入门](https://segmentfault.com/a/1190000003000515[spring AOP入门](https://segmentfault.com/a/1190000003000515)      
+1. JDK创建代理对象效率比CGLib高，而CGLib创建的代理对象运行效率比JDK的要高。[spring AOP入门](https://segmentfault.com/a/1190000003000515)[spring AOP入门](https://segmentfault.com/a/1190000003000515)      
 1. org.springframework.context.support.AbstractApplicationContext#refresh中调用org.springframework.context.support.AbstractApplicationContext#registerBeanPostProcessors时会把动态代理要代理的内容注册到org.springframework.beans.factory.support.AbstractBeanFactory#beanPostProcessors中让后在org.springframework.context.support.AbstractApplicationContext#finishBeanFactoryInitialization中调用org.springframework.beans.factory.config.ConfigurableListableBeanFactory#preInstantiateSingletons中执行动态代理的逻辑。
 
             
