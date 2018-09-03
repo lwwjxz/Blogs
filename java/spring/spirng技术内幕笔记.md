@@ -62,6 +62,7 @@ Processor等。
     1. org.springframework.web.context.ContextLoaderListener#contextInitialized，event中包含tomcat容器的上下文ApplicationContextFacade。    
     1. 最终也是调用 org.springframework.context.support.AbstractApplicationContext#refresh。    
     1. WebApplicationContext是父上下文，DispatchServlet会持有子上下文。     
+    1. DispatcherServlet也会启动一个WebApplicationContext上线双亲上下文就是ContextLoaderListener启动的WebApplicationContext。     
     1. 
 
 
