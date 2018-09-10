@@ -11,6 +11,6 @@
     -XX：BiasedLockingStartupDelay = 0。如果你确定自己应用程序里所有的锁通常情况下处于竞争状态，可以通过JVM参数关闭偏向锁
     -XX:-UseBiasedLocking=false，那么默认会进入轻量级锁状态。     
 1. 锁消除，锁粗化 [参考](https://blog.csdn.net/chenssy/article/details/54883355)    
-1. synchronized与java.util.concurrent包中的ReentrantLock相比，由于JDK1.6中加入了针对锁的优化措施（见后面），使得synchronized与ReentrantLock的性能基本持平。ReentrantLock只是提供了synchronized更丰富的功能，而不一定有更优的性能，所以在synchronized能实现需求的情况下，优先考虑使用synchronized来进行同步。      
+1. synchronized与java.util.concurrent包中的ReentrantLock相比，由于JDK1.6中加入了针对锁的优化措施（见后面），使得synchronized与ReentrantLock的性能基本持平。ReentrantLock只是提供了synchronized更丰富的功能，而不一定有更优的性能，所以在synchronized能实现需求的情况下，优先考虑使用synchronized来进行同步。如果死锁synchronized也比较好排查。      
 1. [好文](https://zhuanlan.zhihu.com/p/29866981)      
 
