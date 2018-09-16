@@ -34,3 +34,31 @@
         1. 虚拟机默认是会回收方法区的如果不想会后则加参数-Xnoclassgc
         1. 可以用 -verbose:class 以及 -XX:+TraceClassLoading -XX:+TraceClassUnLoading查看
         类的加载和卸载信息,-XX:+TraceClassUnLoading只有在FastDebug版的虚拟机支持。    
+1. 复制算法当Survivor不够用时会分配到老年代。    
+1. 标记整理适合老年代因为如果用复制法的话没有担保万一survivor不够用就麻烦了。   
+1. 枚举跟节点:枚举根节点需要stop the world 所以停顿时间越短越好最优解是用准确GC代替保守GC和办保守GC。    
+1. 只有达到安全点后才能进行GC。    
+1. 垃圾收集器的种类。    
+    1. Serial收集器单线程停顿时间长且是最古老的收集器，在client模式或者单核下。Serial收集年轻带，    该收集器使用复制算法。   
+    1. SerialOld收集老年代。该收集器使用标记整理算法。    
+    1. ParNew  Serial的多线程版本适用于年轻带。是年轻代收集器中唯一能和CMS配合工作的。     该收集器使用复制算法             
+    1. Parallel Scavenge年轻代收集器，关注吞吐量的垃圾收集器吞吐量越高cpu用于垃圾收集的时间越少。而CMS等手机器是尽快能stop the world的时间。所以要与用户交互的应用最好不选用该收集器。    该收集器使用复制算法。     
+    1. CMS标记整理算法:Concurrent Mark Sweep。     
+    1. G1
+1. 并行（Parallel）：指多条垃圾收集线程并行工作，但此时用户线程仍然处于等待状态。
+并发（Concurrent）：指用户线程与垃圾收集线程同时执行（但不一定是并行的，可能会交替执行），用户程序在继续运行。而垃圾收集程序运行在另一个CPU上。     
+1. 理解GC日志    
+    1. 最前面的数组表示GC发生的时间：从虚拟机启动以来经过的秒数。    
+    1. `GC` 和 `Full GC`是证明这次收集的停顿类型不是用来区分新生代还是老年代的。    
+    1. `DefNew Tenured `等是表示GC发生的区域，区域名称更GC收集器相关。 2323k->123k(5000k)`回收前容量->回收后容量(该区域总容量)`    
+    1. 方括号    
+    1. 
+1. [并行并发的区别](https://www.zhihu.com/question/33515481)          
+1. 大对象直接进入老年代，最好避免朝生夕死的大对象。     
+1. 年龄大于MaxTenuringThreshould直接进入老年代，空间中年龄相同的对象大于或等于survivor容量的一般则年龄大于或等于该年龄的对象就可以直接进入老年代
+不必大于MaxTenuringThreshould。     
+1. survivor的容量不足以接受一次young gc的结果时会直接进入老年代称为空间分配担保。    
+
+
+
+            
