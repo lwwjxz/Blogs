@@ -9,5 +9,28 @@
 1. 直接内存:直接内存并不是虚拟机运行时数据区域的一部分，也不是java虚拟机规范中定义的内存区域。但是这部分内存也被
 频繁的使用，而且也可能导致OOM。NIO的中的DirectByteBuffer对象就指向的是直接内存。避免了在java堆和Native堆中的
 来回复制数据。     
-1. 永久带是hotspot中对方法区的实现。-Xmx 8G中的8G不包含永久带。    
-
+1. 永久带是hotspot中对方法区的实现。-Xmx 8G中的8G不包含永久带。永生代是hotspot中的一个概念，其他jvm实现未必有，例如jrockit就没这东西。java8之前，hotspot使用在内存中划分出一块区域来存储类的元信息、类变量以及内部字符串（interned string）等内容，称之为永生代，把它作为方法区来使用。[JEP122][2]提议取消永生代，方法区作为概念上的区域仍然存在。原先永生代中类的元信息会被放入本地内存（元数据区，metaspace），将类的静态变量和内部字符串放入到java堆中。     
+1. System.gc()能手动回收垃圾。    
+1. GC Roots 分为下面几种:
+    1. 虚拟机栈中引用的对象。   
+    1. 方法区中静态属性引用的对象。   
+    1. 方法区中常量引用的对象。   
+    1. 本地方法栈中引用的对象。   
+1. 引用类型:强引用，软引用，弱引用和虚引用。   
+    1. [十分钟理解Java中的弱引用](https://www.jianshu.com/p/a7aaaf1bd7be)弱引用的作用是如果一个对象只被弱引用的话就可以回收解决的问题就是
+    用于只有被被的引用引用的情况下才有意义。     
+    1. [Java幽灵引用的作用](https://blog.csdn.net/imzoer/article/details/8044900)     
+1. 不可达ROOT GC后还有一次不被收集的机会就是 finalize方法还可以重新拯救自己，但是不保证finalize方法一定会被执行完，
+引用如果finalize方法发生阻塞或者死循环可能导致整个系统崩溃。    
+1. 回收方法区:     
+    1. 无用的类    
+        1. 该类的所有实例已经被回收。   
+        1. 加载该类的ClassLoader已经被回收。    
+        1. 该类对应的java.lang.Class对象没有被任何地方引用。    
+    1. 不再被引用的常量。判断方法跟堆中的变量一样。    
+    1. 在大量使用反射、动态代理、CGlib等ByteCode框架、动态生成JSP以及OSGI这类频繁自定义ClassLoader的
+    场景都需要虚拟机具备类卸载的功能，以保证永久带不会溢出。    
+    1. 参数:
+        1. 虚拟机默认是会回收方法区的如果不想会后则加参数-Xnoclassgc
+        1. 可以用 -verbose:class 以及 -XX:+TraceClassLoading -XX:+TraceClassUnLoading查看
+        类的加载和卸载信息,-XX:+TraceClassUnLoading只有在FastDebug版的虚拟机支持。    
