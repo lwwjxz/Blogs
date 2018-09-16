@@ -38,7 +38,7 @@
 1. 标记整理适合老年代因为如果用复制法的话没有担保万一survivor不够用就麻烦了。   
 1. 枚举跟节点:枚举根节点需要stop the world 所以停顿时间越短越好最优解是用准确GC代替保守GC和办保守GC。    
 1. 只有达到安全点后才能进行GC。    
-1. 垃圾收集器的种类。    
+1. 垃圾收集器的种类。[参考](https://crowhawk.github.io/2017/08/15/jvm_3/)      
     1. Serial收集器单线程停顿时间长且是最古老的收集器，在client模式或者单核下。Serial收集年轻带，    该收集器使用复制算法。   
     1. SerialOld收集老年代。该收集器使用标记整理算法。    
     1. ParNew  Serial的多线程版本适用于年轻带。是年轻代收集器中唯一能和CMS配合工作的。     该收集器使用复制算法             
@@ -58,6 +58,15 @@
 1. 年龄大于MaxTenuringThreshould直接进入老年代，空间中年龄相同的对象大于或等于survivor容量的一般则年龄大于或等于该年龄的对象就可以直接进入老年代
 不必大于MaxTenuringThreshould。     
 1. survivor的容量不足以接受一次young gc的结果时会直接进入老年代称为空间分配担保。    
+1. jstat [结果解释](https://blog.csdn.net/maosijunzi/article/details/46049117)      
+1. jmap    
+    1. 导出整个JVM 中内存信息`jmap -dump:format=b,file=文件名 [pid]`       
+    1. 查看整个JVM内存状态 `jmap -heap [pid]`要注意的是在使用CMS GC 情况下，jmap -heap的执行有可能会导致JAVA 进程挂起      
+1. VisualVM   
+    1. 生成堆dump     
+    1. 分析程序性能     
+    1. profiler页中可以看方法的耗时点击CPU可以查看方法的耗时，点击内存则可查看每个方法关联的对象以及这些对象所占的内存。     
+    1. Btrace通过HotSwap(热替换)技术修改。     
 
 
 
