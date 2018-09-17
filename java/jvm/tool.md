@@ -51,4 +51,5 @@
 >ps 一定要加`-Djava.rmi.server.hostname=192.168.1.156`第一次调试的时候忘了加搞了好久没连上。   
 1. [eclipse MAT用法 ](https://blog.csdn.net/wanghuiqi2008/article/details/50724676)   
 1. [内存分析工具 MAT 的使用](https://blog.csdn.net/aaa2832/article/details/19419679)    
+1. VisualVM的BTrace插件比较难用代替方案[arthas](https://github.com/alibaba/arthas),[greys](https://github.com/oldmanpushcart/greys-anatomy)      
     
