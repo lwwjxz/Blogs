@@ -72,6 +72,14 @@
 1. Runtime.getRuntime().exec()非常耗性能最好不用。    
 1. 对应程序员而言类加载阶段中获取二进制流的动作是最可控的。     
 1. java中数组类本身不通过类加载器创建，类的原始才会通过类加载器创建。     
+1. 类加载器:        
+    1. BootStrap 加载JAVA_HOME/lib目录中的类，或者-Xbootclasspath中的类（仅按名称加载？),
+        ```
+        sun.boot.class.path = /usr/java/jdk1.8.0_121/jre/lib/resources.jar:/usr/java/jdk1.8.0_121/jre/lib/rt.jar:/usr/java/jdk1.8.0_121/jre/lib/sunrsasign.jar:/usr/java/jdk1.8.0_121/jre/lib/jsse.jar:/usr/java/jdk1.8.0_121/jre/lib/jce.jar:/usr/java/jdk1.8.0_121/jre/lib/charsets.jar:/usr/java/jdk1.8.0_121/jre/lib/jfr.jar:/usr/java/jdk1.8.0_121/jre/classes
+        ```
+    1. Extension ClassLoader 负责加载 JAVA_HOME/lib/ext 和系统变量java.ext.dirs指定的路径中的所有库。    
+    1. Application ClassLoader 负责加载用户类用户路径中的类，设定的classpath(对应的jvm参数是 -cp 或 -classpath不支持通配符)。      
+    
 
 
 1. 配置一个线上运行的应用需要配置的参数:堆内存大小,垃圾收集器选择,崩溃的时候dump core文件，开启JMX
