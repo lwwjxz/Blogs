@@ -78,7 +78,10 @@
         sun.boot.class.path = /usr/java/jdk1.8.0_121/jre/lib/resources.jar:/usr/java/jdk1.8.0_121/jre/lib/rt.jar:/usr/java/jdk1.8.0_121/jre/lib/sunrsasign.jar:/usr/java/jdk1.8.0_121/jre/lib/jsse.jar:/usr/java/jdk1.8.0_121/jre/lib/jce.jar:/usr/java/jdk1.8.0_121/jre/lib/charsets.jar:/usr/java/jdk1.8.0_121/jre/lib/jfr.jar:/usr/java/jdk1.8.0_121/jre/classes
         ```
     1. Extension ClassLoader 负责加载 JAVA_HOME/lib/ext 和系统变量java.ext.dirs指定的路径中的所有库。    
-    1. Application ClassLoader 负责加载用户类用户路径中的类，设定的classpath(对应的jvm参数是 -cp 或 -classpath不支持通配符)。      
+    1. Application ClassLoader 负责加载用户类用户路径中的类，设定的classpath(对应的jvm参数是 -cp 或 -classpath不支持通配符)。   
+    
+1. 类的加载行为中用户能控制的主要就是字节码生成(javaagent)和类加载器两部分。    
+1. 
     
 
 
