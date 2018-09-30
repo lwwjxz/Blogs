@@ -1,3 +1,3 @@
 1. 公司的办公网络连了电信和联通。下面两个命令分别获取到电信和联通的外网出口ip，应该是路由配置的策略引起的。     
-  `curl myip.ipip.net` 获取的结果是电信的。    
-  `curl ipinfo.io` 获取的是联调的。      
+  `curl myip.ipip.net` 获取的结果是电信的。     
+  `curl ipinfo.io` 获取的是联通的。    
