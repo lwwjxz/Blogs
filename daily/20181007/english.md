@@ -16,7 +16,8 @@ change in china today。
 并列不变序，
 在工作中没有激情也没有想法的人是不会有进步的。  
 A man without passion and without ideas an work will not make any progress.    
-12and34 -> 21and43     
+12and34 -> 21and43   
+
 
 
 
