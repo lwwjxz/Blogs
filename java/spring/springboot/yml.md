@@ -1,4 +1,4 @@
-1. 配置房上面，环境相关的放下面
+1. 通用配置放上面，环境相关的配置放下面
     ```
     mybatis:
       config-location: mybatis/mybatis-config.xml
