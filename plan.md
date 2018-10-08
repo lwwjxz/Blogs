@@ -23,6 +23,7 @@
             1. spring boot。     
             1. spring cloud。    
         1. netty   io      
+        1. httpclient    
         1. 分布式事务        
         1. zk        
         1. dubbo     
