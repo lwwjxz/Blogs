@@ -33,9 +33,21 @@
 
     <logger name="poggyio.restapi" level="warn" />
     <logger name="poggyio.boot" level="warn" />
-    <root level="error">
-        <appender-ref ref="file" />
-        <!--<appender-ref ref="console" />-->
-    </root>
+    
+    <springProfile name="dev">
+        <root level="info">
+            <appender-ref ref="console"/>
+        </root>
+    </springProfile>
+    <springProfile name="test">
+        <root level="info">
+            <appender-ref ref="file"/>
+        </root>
+    </springProfile>
+    <springProfile name="prod">
+        <root level="info">
+            <appender-ref ref="file"/>
+        </root>
+    </springProfile>
 </configuration>
   ```
