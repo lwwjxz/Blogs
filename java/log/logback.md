@@ -1,10 +1,7 @@
 
-1. springboot的application.yml中配置文件地址        
-  ```
-  # 日志配置
-  logging:
-  config: classpath:logback/logback.xml
-  ```
+1. springboot的application.yml中不用加日志相关的配置。默认会找logback-spring.xml。
+> 最好用logback-spring.xml作为文件名而不是logback.xml因为在测试的过程中发现如果文件中有springProfile属性启动的时候回有点问题(能正常启动，也可以正常使用)，我猜是刚开始启动的时候还没有加载application.yml文件所以有点问题而logback-spring.xml如果找不到会用默认的配置，这应该是spring-boot做的
+优化，难怪推荐用logback-spring.xml作为文件名。    
 1. 常用配置:[参考](https://segmentfault.com/a/1190000008315137#articleHeader9)      
   ```
   <configuration>
