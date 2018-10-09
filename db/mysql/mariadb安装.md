@@ -4,7 +4,8 @@
 1. 
 ```
 systemctl start mariadb #启动服务
-systemctl enable mariadb #设置开机启动
+systemctl enable mariadb #设置开机启动   
+systemctl disable mariadb #关闭开机启动
 systemctl restart mariadb #重新启动
 systemctl stop mariadb.service #停止MariaDB
 ```
@@ -15,8 +16,9 @@ mysql默认拒绝用户使用root账户启动，因为拥有文件权限的用�
 
 1. 用mysql -uroot命令登录到MariaDB，此时root账户的密码为空。     
 1. 使用mysql_secure_installation命令进行配。有密码输密码，没密码直接回车。      
+    > 这应该是安全设置的初始化,按照提示一步一步来就好了。     
 1. 配置MariaDB的字符集
-    1. 查看/etc/my.cnf文件内容，其中包含一句!includedir /etc/my.cnf.d 说明在该配置文件中引入/etc/my.cnf.d 目录下的配置文件。    
+    1. 查看/etc/my.cnf文件内容，其中包含一句!includedir /etc/my.cnf.d 说明在该配置文件中引入q 目录下的配置文件。    
     1. 使用vi server.cnf命令编辑server.cnf文件，在[mysqld]标签下添加       
     
     ```
@@ -28,7 +30,7 @@ mysql默认拒绝用户使用root账户启动，因为拥有文件权限的用�
     ```
     如果/etc/my.cnf.d 目录下无server.cnf文件，则直接在/etc/my.cnf文件的[mysqld]标签下添加以上内容。    
     1.  用vi  client.cnf命令编辑/etc/my.cnf.d/client.cnf文件，在[client]标签下添加     
-    
+    :
     ```
     default-character-set=utf8
     ```    
