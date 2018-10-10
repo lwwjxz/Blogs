@@ -10,6 +10,8 @@ systemctl restart mariadb #重新启动
 systemctl stop mariadb.service #停止MariaDB
 ```
 
+虽然是sudo 命令起的但是进程所具有的权限才是mysql用户的 
+查看命令: `ps -ax -o ruid -o euid -o suid -o fuid -o pid -o fname `   根据uid查看用户信息`getent passwd uid`      
 docker 不能允许以上命令。可以允许mysqld。    
 mysql默认拒绝用户使用root账户启动，因为拥有文件权限的用户可能导致MySQL Server使用root帐户创建文件（比如，~root/.bashrc），但root用户可以通过在命令后面加上"--user=root"选项来强行启动mysqld。
 
