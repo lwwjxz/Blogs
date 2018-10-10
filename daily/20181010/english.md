@@ -16,4 +16,3 @@
     You and I are friends.  
     You were ,are and will in my heart.  
     ```
-1. 1:08.    
