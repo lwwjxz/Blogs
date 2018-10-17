@@ -26,5 +26,16 @@
         1. 而且写和读没有通过同步来排序.       
         1. 如果一个多线程程序能正确同步，这个程序将是一个没有数据竞争的程序。出现数据竞争有可能得到错误的结果    
     1. JMM不保证顺序一致性，需要些代码保证。JMM只能保证最小安全性      
+1. [深入理解Java内存模型（四）——volatile](http://www.infoq.com/cn/articles/java-memory-model-4?utm_source=infoq&utm_campaign=user_page&utm_medium=link)       
+    1. 禁止重排序和保证内存可见性。     
+    1. 可以当做普通的get，set方法加了synchronized。      
+1. [深入理解Java内存模型（五）——锁](http://www.infoq.com/cn/articles/java-memory-model-5?utm_source=infoq&utm_campaign=user_page&utm_medium=link)         
+    1. lock,由于加锁和释放锁都操作了volitale保证了内存可见并禁止了重排序。     
+1. [深入理解Java内存模型（六）——final](http://www.infoq.com/cn/articles/java-memory-model-6?utm_source=infoq&utm_campaign=user_page&utm_medium=link)        
+    1. 在构造函数内对一个final域的写入，与随后把这个被构造对象的引用赋值给一个引用变量，这两个操作之间不能重排序。    
+    1. 初次读一个包含final域的对象的引用，与随后初次读这个final域，这两个操作之间不能重排序。编译器不可能出现这种重排序，这种主要是针对部分架构的CPU。    
+    1. 构造函数中final引用对象成员变量写不能排序到构造函数外，推测成员变量的成员变量的写也不能重排序到构造函数外，这样用起来才简单合理。     
+1. [双重检查锁定与延迟初始化](http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization?utm_source=infoq&utm_campaign=user_page&utm_medium=link)       
+    1. 基于volatile的双重检查锁定的解决方案因为instance = new Instance()是分三步的，如果不用volatile这三步直接可以重排序当另一个线程执行外层的if (instance == null) 因为此线程没有获取锁所以有可能instance已经被分配内存(!=null)但是没有被实例化。      
 
 
