@@ -17,4 +17,6 @@
   /bin/systemctl reload  crond.service  #重新载入配置
 
   /bin/systemctl status  crond.service  #查看crontab服务状态
+  
+  没有安装/bin/systemctl的话用service crond restart
   ```    
