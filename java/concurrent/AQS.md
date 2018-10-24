@@ -1,4 +1,5 @@
 1. [参考](http://www.cnblogs.com/yulinfeng/p/6874240.html)     
+    1. AQS是一个用于构建锁和同步器的框架。例如在并发包中的ReentrantLock、Semaphore、CountDownLatch、ReentrantReadWriteLock等都是基于AOS构建，这些锁都有一个特点，都不是直接扩展自AQS，而是都有一个内部类继承自AQS。为什么会这么设计而不是直接继承呢？简而言之，锁面向的是使用者，同步器面向的是线程控制(可以理解为锁的实现方案)，在锁的实现中聚合同步器而不是直接继承AQS很好的隔离了二者所关注的领域。         
     1. 这个在AQS定义的方法`tryAcquire`表示该方法保证线程安全的获取同步状态   
     1. `enq(final Node node)`方法中的compareAndSetHead不太理解为什么要初始化一个空的Node，而不是直接将当期Node指向head和tail？ 
     原因还不清楚但是以下实时有利于理解
