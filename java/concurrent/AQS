@@ -4,10 +4,10 @@
     try -> 入队 -> 死循环获取         
 1. head是获取到锁的线程所在的node。      
 1. setHead方法会把新的head的prev设置为null。        
-1. 自旋逻辑     
+1. 自旋逻辑：关键点park和unpark没有先后顺序所以就没有犹豫顺序不一样引发的问题了。           
    pred.waitStatus==Node.SIGNAL 等待pred唤醒。猜想waitStatus从pred.waitStatus变回其他值时会unpark队列中的下一个值，unpark在park前面也是可以的，所以的时候也有效。             
    pred.waitStatus==Node.CANCELLED 把pred移出队列。CANCELLED为最终状态所以不用担心真正去移出的时候状态有变调。    
-   pred.waitStatus==0(初始化)或Node.PROPAGATE把pred.waitStatus设置为Node.SIGNAL不管是否失败则重新尝试获取锁。
+   pred.waitStatus==0(初始化)或Node.PROPAGATE把pred.waitStatus设置为Node.SIGNAL不管是否失败则重新尝试获取锁。       
    只要不是Node.SIGNAL就继续遍历，
 1. 第一个NODE入队后，node = head = tail       
     
