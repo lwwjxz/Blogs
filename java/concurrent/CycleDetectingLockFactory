@@ -1,0 +1,1 @@
+guava中的工厂类用于生成ReentrantLock和ReentrantReadWriteLock的实例能自动检测死锁。     
