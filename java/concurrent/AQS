@@ -23,6 +23,7 @@
 1. 所有acquire方法失败后都会调用final中的`java.util.concurrent.locks.AbstractQueuedSynchronizer#cancelAcquire`方法取消等待      
 1. 只要不是Node.SIGNAL就继续遍历，        
 1. condition     
+    1. await会把线程对应的node拿出来放到等待队列。     
     1. 只有获取了锁才能调用await方法，在await方法中会尝试tryRelease，调用tryRelease的时候如果不是当前获取获取锁的线程会抛出异常。     
     1. await方法中会激活队列中的洗衣柜线程。        
     1. 被signal唤醒的线程会重新获取锁如果获取不到则加入等待队列。          
