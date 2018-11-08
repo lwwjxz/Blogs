@@ -1,0 +1,1 @@
+1. [java比AtomicLong 更高效的LongAdder](http://huangyunbin.iteye.com/blog/2291382)    
