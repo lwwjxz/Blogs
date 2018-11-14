@@ -1,1 +1,1 @@
-1. [HTTP 请求头中的 X-Forwarded-For（XFF）](https://blog.csdn.net/yizhenn/article/details/60955599)
+1. [HTTP 请求头中的 X-Forwarded-For（XFF）](https://www.jianshu.com/p/327c7fdcbeea)

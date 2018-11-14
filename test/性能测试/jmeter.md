@@ -9,5 +9,7 @@
         3. All avtive threads(shared)：与All active threads的选项基本相同。唯一区别是，每个活跃线程都会在所有活跃线程上一次运行结束后等待合理的时间后再次运行。
         4. All active threads in current thread group：设置的target Throughput 将分配在当前线程组的每一个活跃线程上，当测试计划中只有一个线程组时，该选项和All active threads 选项的效果完全相同。
         5. All active threads in current thread group(shared)：与All active threads in current thread group 基本相同，唯一的区别是，每个活跃线程都会在所有活跃线程的上一次运行结束后等待合理的时间后再次运行。
+1. [命令行运行](https://www.cnblogs.com/kongzhongqijing/p/7216693.html)
+        `./bin/jmeter -n -t data.jmx -l result.jtl -e -o result`目录result必须为空
 
 
