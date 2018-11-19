@@ -4,7 +4,6 @@
     1. 修改配置文件
         ```
         /etc/zabbix/zabbix_agentd.conf
-
         PidFile=/var/run/zabbix/zabbix_agentd.pid
         LogFile=/var/log/zabbix/zabbix_agentd.log
         LogFileSize=0
@@ -16,3 +15,5 @@
         Include=/etc/zabbix/zabbix_agentd.d/*.conf
         ```
 1. [配置和查看](http://blog.51cto.com/solin/1846775)
+2. 测试场景下server直接通过docker安装`docker run -e PHP_TZ=Asia/Shanghai --name xxx -p 80:80 -p 10051:10051 -d zabbix/zabbix-appliance`
+3. 
