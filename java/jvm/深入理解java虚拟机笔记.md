@@ -4,25 +4,30 @@
 1. 虚拟机栈:虚拟机栈是线程私有的，声明周期与线程相同。每个方法在执行的同时都会创建一个栈帧。    
 1. 本地方法栈:跟虚拟机栈的不同是本地方法栈服务于native方法。    
 1. 堆是被线程共享的。    
-1. 方法区(Method Area 别名 Non-Heap): 被线程共享的，用于存储已经被jvm加载的类信息、常量、静态变量、即时编译器编译(JIT)的代码等数据。      
+1. 方法区(Method Area 别名 Non-Heap): 被线程共享的，用于存储已经被jvm加载的类信息、常量、静态变量、即时编译器编译(JIT)的代码等数据。
+2. [Metaspace](https://blog.csdn.net/sczyh22/article/details/46662279)
+    PermGen 最终被移除，方法区移至 Metaspace，字符串常量移至 Java Heap  最直接的表现就是java.lang.OutOfMemoryError: PermGen 空间问题将不复存在，因为默认的类的元数据分配只受本地内存大小的限制，也就是说本地内存剩余多少，理论上Metaspace就可以有多大（貌似容量还与操作系统的虚拟内存有关？这里不太清楚），这解决了空间不足的问题。   
 1. 运行时常量池: 方法区的一部分用于存放编译期生成的`(不太理解什么是编译期生成)`各种字面量和符号引用。并不是只有编译期才能产生常量，运行期间也可以将新
 的常量放入池中，这种特性被开发人员利用的比较多的是String的intern()方法`(不太懂)`。
 1. 直接内存:直接内存并不是虚拟机运行时数据区域的一部分，也不是java虚拟机规范中定义的内存区域。但是这部分内存也被
 频繁的使用，而且也可能导致OOM。NIO的中的DirectByteBuffer对象就指向的是直接内存。避免了在java堆和Native堆中的
 来回复制数据。     
 1. 永久带是hotspot中对方法区的实现。-Xmx 8G中的8G不包含永久带。永生代是hotspot中的一个概念，其他jvm实现未必有，例如jrockit就没这东西。java8之前，hotspot使用在内存中划分出一块区域来存储类的元信息、类变量以及内部字符串（interned string）等内容，称之为永生代，把它作为方法区来使用。[JEP122][2]提议取消永生代，方法区作为概念上的区域仍然存在。原先永生代中类的元信息会被放入本地内存（元数据区，metaspace），将类的静态变量和内部字符串放入到java堆中。     
-1. System.gc()能手动回收垃圾。    
+1. System.gc()能手动回收垃圾且为fullgc。    
+2. When a Garbage Collector gets called, it starts iterating over all elements in the heap. GC stores reference type objects in a special queue.
 1. GC Roots 分为下面几种:
     1. 虚拟机栈中引用的对象。   
     1. 方法区中静态属性引用的对象。   
     1. 方法区中常量引用的对象。   
     1. 本地方法栈中引用的对象。   
 1. 引用类型:强引用，软引用，弱引用和虚引用。   
-    1. [十分钟理解Java中的弱引用](https://www.jianshu.com/p/a7aaaf1bd7be)弱引用的作用是如果一个对象只被弱引用的话就可以回收解决的问题就是
+    1. [十分钟理解Java中的弱引用](https://www.jianshu.com/p/a7aaaf1bd7be)弱引用的作用是如果一个对象只被弱引用的话就可以回收解决的问题就是，站在垃圾管理的角度就相当于没有引用。
     用于只有被被的引用引用的情况下才有意义。     
     1. [Java幽灵引用的作用](https://blog.csdn.net/imzoer/article/details/8044900)     
+    2. [软引用](https://www.baeldung.com/java-soft-references)
+        1. 只保证在OOM之前被回收
 1. 不可达ROOT GC后还有一次不被收集的机会就是 finalize方法还可以重新拯救自己，但是不保证finalize方法一定会被执行完，
-引用如果finalize方法发生阻塞或者死循环可能导致整个系统崩溃。    
+引用如果finalize方法发生阻塞或者死循环可能导致整个系统崩溃。所以要用钩子。    
 1. 回收方法区:     
     1. 无用的类    
         1. 该类的所有实例已经被回收。   

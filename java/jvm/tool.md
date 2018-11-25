@@ -13,6 +13,7 @@
         示例`jps -mlv10.134.68.173` 如果需要查看其他机器上的jvm进程，需要在待查看机器上启动jstatd   d结尾在linux上一般表示服务。  
 1. jstat:虚拟机统计信息监视(运行期定位虚拟机性能问题的首选工具)    
     使用方法见 《深入记录Java虚拟机：JVM高级特许与最佳实践》     
+    
 1. jinfo:java配置信息工具。   
     jps 只能查看虚拟机启动时显式指定的参数，jinfo还可以显示默认的参数。  
     jinfo -sysprops 可以查看System.getProperties()的内容显示出来。    
