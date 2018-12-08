@@ -1,0 +1,4 @@
+spring的加载走一遍，包括spring mvc的。
+definition的加载过程。注入的过程
+父子application获取bean的方法走一遍。
+查看内存中的对象。
