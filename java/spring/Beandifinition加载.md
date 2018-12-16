@@ -1,0 +1,2 @@
+1. 默认的bean会被解析为一个Beandifinition注册到容器中放到ConcurrentHashMap中。
+2. ObjectFactory

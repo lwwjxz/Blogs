@@ -1,0 +1,1 @@
+1. 所有的dubbo服务提供方，在spring中都被加载为ServiceBean的实例。应该是这样的，看到加载Beandifinition了实例化的时候还没往下看。

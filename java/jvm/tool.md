@@ -55,5 +55,5 @@
     >有jstatd和jmx两种方式这里用是jmx的方式
 1. [eclipse MAT用法 ](https://blog.csdn.net/wanghuiqi2008/article/details/50724676)   
 1. [内存分析工具 MAT 的使用](https://blog.csdn.net/aaa2832/article/details/19419679)    
-1. VisualVM的BTrace插件比较难用代替方案[arthas](https://github.com/alibaba/arthas),[greys](https://github.com/oldmanpushcart/greys-anatomy)      
+1. VisualVM的BTrace插件比较难用代替方案[arthas](https://github.com/alibaba/arthas),[greys](https://github.com/oldmanpushcart/greys-anatomy)，arthas是在greys的基础上二次开发然后开源的。      
     

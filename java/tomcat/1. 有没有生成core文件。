@@ -1,0 +1,5 @@
+1. 有没有生成core文件。
+2. 查看jinfo。
+3. bash -x 。用hotspot启动
+1. nohup top -b -n 28000 -d 1 > lll.out 1>/dev/null 2>&1 &。
+1. 找翠神咨询下。

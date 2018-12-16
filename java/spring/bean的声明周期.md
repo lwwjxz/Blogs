@@ -1,0 +1,1 @@
+1. [Spring Bean生命周期](https://www.cnblogs.com/sishang/p/6575839.html)

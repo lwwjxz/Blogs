@@ -1,4 +1,23 @@
 spring的加载走一遍，包括spring mvc的。
+1. ROOT WebApplicationContext.
+	1. org.springframework.context.support.AbstractApplicationContext#refresh
+		1. 加载配置
+		1. org.springframework.context.support.AbstractApplicationContext#prepareRefresh加载配置文件
+		2. org.springframework.context.support.AbstractApplicationContext#obtainFreshBeanFactory刷新工厂类。
+			1. org.springframework.context.support.AbstractRefreshableApplicationContext#refreshBeanFactory。刷新工厂类。
+			2. org.springframework.web.context.support.XmlWebApplicationContext#loadBeanDefinitions加载BeanDefinitions。
+			3. org.springframework.web.context.support.XmlWebApplicationContext#loadBeanDefinitions(org.springframework.beans.factory.xml.XmlBeanDefinitionReader)是上面方法的重载方法。	
+			4. org.springframework.beans.factory.support.AbstractBeanDefinitionReader#loadBeanDefinitions(java.lang.String, java.util.Set<org.springframework.core.io.Resource>)
+				1. 加载namespaceHandler.
+				1. 
+
 definition的加载过程。注入的过程
 父子application获取bean的方法走一遍。
 查看内存中的对象。
+spring boot
+
+
+org.springframework.context.annotation.ClassPathBeanDefinitionScanner#doScan 扫描注解加载bean。
+加载BeanDifinition的时候没有循环依赖的问题呀，因为没有实例化。
+dispatherServlet是由web容器(tomcat)加载的。
+dispatherServlet初始化方法org.springframework.web.servlet.FrameworkServlet#initServletBean
