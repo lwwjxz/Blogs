@@ -33,6 +33,7 @@
             1. spring boot。     
             1. spring cloud。    
         1. netty   io      
+        2. 研究下dubbo中的zk。
         1. httpclient    
         1. 分布式事务        
         1. zk        
@@ -76,6 +77,7 @@
         2. lsof
         3. ps
         5. tar   
+        6. 
  1. 其他。      
     1. 时间复杂度和空间复杂度。    
     1. 布隆过滤     
