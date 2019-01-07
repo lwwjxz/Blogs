@@ -1,0 +1,1 @@
+[参考](https://www.cnblogs.com/lvdabao/p/es6-promise-1.html)

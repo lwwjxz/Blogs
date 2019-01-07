@@ -1,3 +1,4 @@
+1. spring的初始化时单线程的。
 spring的加载走一遍，包括spring mvc的。
 1. ROOT WebApplicationContext.
 	1. org.springframework.context.support.AbstractApplicationContext#refresh

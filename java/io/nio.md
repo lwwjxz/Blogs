@@ -1,3 +1,8 @@
+These fields are declared here rather than in Heap-X-Buffer in order to reduce the number of virtual method invocations needed to access these values, which is especially costly when coding small buffers.
+    //
+
+
+
 1. io多个线程阻塞，NIO一个线程阻塞。   
 1. [io实现socket](https://github.com/jasonGeng88/blog/blob/master/201708/java-socket.md) vs [NIO socket实现](https://github.com/jasonGeng88/blog/blob/master/201708/java-nio.md)    
 
