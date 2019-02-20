@@ -1,0 +1,1 @@
+1. [将一个复杂对象的构建(buildPartA,buildPartB...)与它的表示(buildPartA,buildPartB...的具体内容)分离。](https://www.hollischuang.com/archives/1477)

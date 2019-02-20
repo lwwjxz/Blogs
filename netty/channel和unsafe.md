@@ -1,0 +1,1 @@
+1. [AbstractNioByteChannel 和 AbstractNioMessageChannel是AbstractNioChannel两个不同的体系，AbstractNioByteChannel 负责底层的字节操作可以看一下AbstractNioByteChannel.NioMessageUnsafe 中的read, doWrite  AbstractNioMessageChannel中的read方法, 通过模板方法doReadMessages(readBuf)将缓存区交给子类处理](https://www.jianshu.com/p/913a5de5a68d?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
