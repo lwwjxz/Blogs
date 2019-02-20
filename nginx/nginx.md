@@ -6,6 +6,6 @@
 1. [Nginx实现虚拟主机和反向代理](https://my.oschina.net/rosetta/blog/745197)       
     1. 虚拟主机意思就是把一台主机虚拟成几台。        
     2. 反向代理是代理其他主机对外提供请求，当然同一台机器上也行。    
-1. 使修改的配置生效:/usr/local/nginx/sbin -r reload   
+1. 使修改的配置生效:/usr/local/nginx/sbin/nginx -s reload   
 2. [nginx的location配置详解](https://blog.csdn.net/tjcyjd/article/details/50897959)只看语法规则部分就行了，其他部分比较乱没看懂。 
 3. 遇到403错误应该是权限的问题修改nginx.conf中user为user  root;      
