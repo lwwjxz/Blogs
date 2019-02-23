@@ -8,7 +8,7 @@ spring的加载走一遍，包括spring mvc的。
 			1. org.springframework.context.support.AbstractRefreshableApplicationContext#refreshBeanFactory。刷新工厂类。
 			2. org.springframework.web.context.support.XmlWebApplicationContext#loadBeanDefinitions加载BeanDefinitions。
 			3. org.springframework.web.context.support.XmlWebApplicationContext#loadBeanDefinitions(org.springframework.beans.factory.xml.XmlBeanDefinitionReader)是上面方法的重载方法。	
-			4. org.springframework.beans.factory.support.AbstractBeanDefinitionReader#loadBeanDefinitions(java.lang.String, java.util.Set<org.springframework.core.io.Resource>)
+			4. org.springframework.beans.factory.support.AbstractBeanDefinitionReader#loadBeanDefinitions(java.lang.String, java.util.Set<org.spring                                                                                                                                                                              framework.core.io.Resource>)
 				1. 加载namespaceHandler.
 				1. 
 
