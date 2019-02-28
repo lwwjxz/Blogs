@@ -15,3 +15,4 @@ ctrl+r          搜索历史命令
 !!              执行上条命令
 ctrl+X Ctrl+E   调用默认编辑器去编辑一个特别长的命令
 ```
+1. [替换](https://blog.csdn.net/shuangde800/article/details/10554513)
