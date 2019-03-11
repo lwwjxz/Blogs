@@ -16,3 +16,6 @@ ctrl+r          搜索历史命令
 ctrl+X Ctrl+E   调用默认编辑器去编辑一个特别长的命令
 ```
 1. [替换](https://blog.csdn.net/shuangde800/article/details/10554513)
+2. 全局删除匹配到的行`:g/pattern/d`
+3. 删除第1-10行里的匹配到的行`:1,10g/pattern/d`
+4. 删除匹配不到的行`:g!/pattern/d`
