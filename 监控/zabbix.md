@@ -47,7 +47,7 @@
     [root@qiniu zabbix]# sysctl -p  //使之设置生效
     ```
 1. [监控jvm需要安装zabbix-java-gateway](https://blog.51cto.com/zengestudy/1789425?source=drt)
-
+    卸载了openjdk后好像起不来了，要重新用yum -y install zabbix-java-gateway 安装才能重启，yum -y remove zabbix-java-gateway
 
 
 2. 测试场景下server直接通过docker安装`docker run -e PHP_TZ=Asia/Shanghai --name xxx -p 80:80 -p 10051:10051 -d zabbix/zabbix-appliance`
