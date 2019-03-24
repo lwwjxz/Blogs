@@ -15,5 +15,8 @@
     1. 复制算法，现在的商业虚拟机中都采用这种算法来来回收新生代。Eden和Survivor取的比例是8：1.  
     1. 标记整理算法，分代回收中的老年代一般采用这种算法。因为老年带的对象一般存活率较高 ，复制算法的效率较低。   
  1. 枚举根节点会stop-the-word，即使在号称（几乎）不会发生停顿的CMS收集器中也一样
+ 1. [怎么判定频繁](https://stackoverflow.com/questions/12599044/what-the-frequency-of-the-garbage-collection-in-java);
+    1. 1秒内两次异常 new gc。
+    1. full gc 当然是越少越好
         
         
