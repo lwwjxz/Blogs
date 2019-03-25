@@ -16,6 +16,16 @@ ctrl+r          搜索历史命令
 ctrl+X Ctrl+E   调用默认编辑器去编辑一个特别长的命令
 ```
 1. [替换](https://blog.csdn.net/shuangde800/article/details/10554513)
-2. 全局删除匹配到的行`:g/pattern/d`
-3. 删除第1-10行里的匹配到的行`:1,10g/pattern/d`
-4. 删除匹配不到的行`:g!/pattern/d`
+    1. 全局替换`:% s / old / new / g`
+    2. 替换当前行:`:s / old / new / g`
+    3. 替换从当前光标开始第一个匹配到的`：s / old / new / `
+    4. 匹配替换50到100行`:50, 100 s / old / new / g`
+2. 删除
+    2. 全局删除匹配到的行`:g/pattern/d`
+    3. 删除第1-10行里的匹配到的行`:1,10g/pattern/d`
+    4. 删除匹配不到的行`:g!/pattern/d`
+    5. 单行第n行：n（待删除行）d
+    6. 删除n到m行: n,m d
+    7. 删除光标所在行: dd
+    8. 删除光标以下n行: n dd
+
