@@ -13,7 +13,13 @@
 [通配符：上边界、下边界与无界](https://blog.csdn.net/hanchao5272/article/details/79355931)      
     <T>：泛型标识符，用于泛型定义（类、接口、方法等）时，可以想象成形参。     
     <?>：通配符，用于泛型实例化时，可以想象成实参。      
-    上边界和下边界巧记:把类的继承关系想象成自上而下Object在最上面，所以 ? extend xxx 中xxx就是上边界。 ? super xxx 中 xxx就是下边界。   
+    上边界和下边界巧记:把类的继承关系想象成自上而下Object在最上面，所以 ? extend xxx 中xxx就是上边界。 ? super xxx 中 xxx就是下边界。 
+    ```
+    List<? super Programmer> programmerLowerList = null;
+    programmerLowerList = new ArrayList<Worker>();
+    //上边界和下边界确定的是 List<? super Programmer> 的引用是否能指向new ArrayList<Worker>()。
+    ```
+
 [泛型](https://segmentfault.com/a/1190000005179142)
     1. Java 的泛型使用了类型擦除机制，这个引来了很大的争议，以至于 Java 的泛型功能受到限制，只能说是”伪泛型“。什么叫类型擦除呢？简单的说就是，类型参数只存在于编译期，在运行时，Java 的虚拟机 ( JVM ) 并不知道泛型的存在。
     2. 类型擦除的补偿。
