@@ -30,6 +30,7 @@
         4. 动态代理
         4. 内部类之间的调用关系。
         4. [guava](http://ifeve.com/google-guava/)
+        1. io
         5. mybatis和竞品
         1. spring     
             1. ioc的主要实现逻辑。      
