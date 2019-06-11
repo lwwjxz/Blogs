@@ -15,10 +15,12 @@
     <?>：通配符，用于泛型实例化时，可以想象成实参。      
     上边界和下边界巧记:把类的继承关系想象成自上而下Object在最上面，所以 ? extend xxx 中xxx就是上边界。 ? super xxx 中 xxx就是下边界。 
 
+
     ```
     List<? super Programmer> programmerLowerList = null;
     programmerLowerList = new ArrayList<Worker>();
     //上边界和下边界确定的是 List<? super Programmer> 的引用是否能指向new ArrayList<Worker>()。
+    
     ```
     
     上边界类型通配符（<? extends 父类型>）：因为可以确定父类型，所以可以以父类型去获取数据（向上转型）。但是不能写入数据。     
