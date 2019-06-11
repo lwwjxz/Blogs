@@ -10,3 +10,12 @@
         System.out.println(strings.getClass().getSuperclass());//class java.lang.Object
 ```
 
+1. 同一个类只生成一个class
+
+```
+        String[] strings = new String[1];
+        String[] strings1 = new String[1];
+        System.out.println(strings.getClass());//class [Ljava.lang.String;
+        System.out.println(strings1.getClass());//class [Ljava.lang.String;
+        System.out.println(strings.getClass()==strings1.getClass());//true
+```
