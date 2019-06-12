@@ -4,4 +4,4 @@
   
 1. 深拷贝的实现方法：     
   >1. 重写所有直接合间接应用的clone方法。[如](https://blog.csdn.net/zhangjg_blog/article/details/18369201)
-  >2. 通过序列化实现[如](https://blog.csdn.net/caoxiaohong1005/article/details/78704890)
+  >2. 通过序列化实现[如](https://blog.csdn.net/caoxiaohong1005/article/details/78704890)，所有的直接合间接引用对象都必须是可序列化的否则clone的结果为null。
