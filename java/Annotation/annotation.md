@@ -2,7 +2,7 @@
     1. 在代码中添加信息的一种形式。    
     2. 元注解:注解的注解。   
     3. java.lang.annotation.Annotation 是所有注解继承的接口,并且是自动继承，不需要定义时指定，类似于所有类都自动继承Object。   
-    4. Inherited : 在您定义注解后并使用于程序代码上时，预设上父类别中的注解并不会被继承至子类别中，您可以在定义注解时加上java.lang.annotation.Inherited 限定的Annotation，这让您定义的Annotation型别被继承下来。注意注解继承只针对class级别注解有效，RetentionPolicy.RUNTIME级别应该也可以吧。
+    4. Inherited : 在您定义注解后并使用于程序代码上时，预设上父类别中的注解并不会被继承至子类别中，您可以在定义注解时加上java.lang.annotation.Inherited 限定的Annotation，这让您定义的Annotation型别被继承下来。注意注解继承只针对class级别注解有效，RetentionPolicy.RUNTIME级别应该也可以吧(没测试过推测应该可以)。
 
 
 
