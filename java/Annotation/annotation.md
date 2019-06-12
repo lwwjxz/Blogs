@@ -7,5 +7,5 @@
 
 
 1. [秒懂，Java 注解 （Annotation）你可以这样学](https://blog.csdn.net/briblue/article/details/73824058)    
-    1. @FunctionalInterface`就是一个具有一个方法的普通接口`，@Repeatable`被该元注解注解的注解能在同一个地方重复` 等注解
+    1. jdk7，8 加了@FunctionalInterface`就是一个具有一个方法的普通接口`，@Repeatable`被该元注解注解的注解能在同一个地方重复` 等注解
 2. [深入理解Java：注解（Annotation）自定义注解入门](http://www.cnblogs.com/peida/archive/2013/04/24/3036689.html)
