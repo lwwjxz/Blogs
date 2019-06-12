@@ -8,6 +8,12 @@
         String[] strings = new String[1];
         System.out.println(strings.getClass());//class [Ljava.lang.String;
         System.out.println(strings.getClass().getSuperclass());//class java.lang.Object
+        int[] ints = new int[1];
+        System.out.println(ints.getClass());//class [I
+        System.out.println(ints.getClass().getSuperclass());//class java.lang.Object
+        double[] doubles = new double[1];
+        System.out.println(doubles.getClass());//class [D
+        System.out.println(doubles.getClass().getSuperclass());//class java.lang.Object
 ```
 
 1. 同一个类只生成一个class
