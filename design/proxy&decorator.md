@@ -1,4 +1,7 @@
-1. [代理和装饰的的区别主要是意图不同形式差不多，代理的意图是控制访问，装饰的意图是动态地给对象添加一些额外的职责。](https://design-patterns.readthedocs.io/zh_CN/latest/structural_patterns/decorator.html#id3)
+1. [代理和装饰的的区别主要是意图不同形式差不多，代理的意图是控制访问，装饰的意图是动态地给对象添加一些额外的职责。](https://design-patterns.readthedocs.io/zh_CN/latest/structural_patterns/decorator.html#id3)      
+1. [代理](https://segmentfault.com/a/1190000007089902)
+    1. 保护代理：权限控制
+    2. 缓存代理：将结果缓存到redis而不每次都去db里边拿。
 1. 一般有两种方式可以实现给一个类或对象增加行为：
     1. 继承机制，使用继承机制是给现有类添加功能的一种有效途径，通过继承一个现有类可以使得子类在拥有自身方法的同时还拥有父类的方法。但是这种方法是静态的，用户不能控制增加行为的方式和时机。
     2. 关联机制，即将一个类的对象嵌入另一个对象中，由另一个对象来决定是否调用嵌入对象的行为以便扩展自己的行为，我们称这个嵌入的对象为装饰器(Decorator)
