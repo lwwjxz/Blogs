@@ -18,5 +18,8 @@
  1. [怎么判定频繁](https://stackoverflow.com/questions/12599044/what-the-frequency-of-the-garbage-collection-in-java);
     1. 1秒内两次异常 new gc。
     1. full gc 当然是越少越好
+1. -XX:+PrintGCApplicationStoppedTime  它就会把全部的JVM停顿时间（不只是GC），打印在GC日志里。
+
+
         
         
