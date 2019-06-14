@@ -20,12 +20,6 @@
     1. 方法区中静态属性引用的对象。   
     1. 方法区中常量引用的对象。   
     1. 本地方法栈中引用的对象。   
-1. 引用类型:强引用，软引用，弱引用和虚引用。   
-    1. [十分钟理解Java中的弱引用](https://www.jianshu.com/p/a7aaaf1bd7be)弱引用的作用是如果一个对象只被弱引用的话就可以回收解决的问题就是，站在垃圾管理的角度就相当于没有引用。
-    用于只有被被的引用引用的情况下才有意义。     
-    1. [Java幽灵引用的作用](https://blog.csdn.net/imzoer/article/details/8044900)     
-    2. [软引用](https://www.baeldung.com/java-soft-references)
-        1. 只保证在OOM之前被回收
 1. 不可达ROOT GC后还有一次不被收集的机会就是 finalize方法还可以重新拯救自己，但是不保证finalize方法一定会被执行完，
 引用如果finalize方法发生阻塞或者死循环可能导致整个系统崩溃。所以要用钩子。    
 1. 回收方法区:     
