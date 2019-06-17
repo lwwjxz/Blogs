@@ -57,6 +57,12 @@
 1. [内存分析工具 MAT 的使用](https://blog.csdn.net/wanghuiqi2008/article/details/50724676)   
 1. [内存分析工具 MAT 的使用](https://blog.csdn.net/aaa2832/article/details/19419679)    
 1. [内存分析工具 MAT 的使用***](https://inter12.iteye.com/blog/1407492)  
+    1. list objects -- with outgoing references : 查看这个对象持有的外部对象引用。
+    1. list objects -- with incoming references : 查看这个对象被哪些外部对象引用。
+    1. show objects by class  --  with outgoing references ：查看这个对象类型持有的外部对象引用
+    1. show objects by class  --  with incoming references ：查看这个对象类型被哪些外部对象引用。
+    1. 元数据区异常可以根据group by classloader
+    ![](https://github.com/lwwjxz/Blogs/blob/master/image/001.png)
 
 1. VisualVM的BTrace插件比较难用代替方案[arthas](https://github.com/alibaba/arthas),[greys](https://github.com/oldmanpushcart/greys-anatomy)，arthas是在greys的基础上二次开发然后开源的。      
     
