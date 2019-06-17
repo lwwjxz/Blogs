@@ -54,7 +54,9 @@
     >ps 端口要设置两次-Dcom.sun.management.jmxremote.port=[RMI_PORT] -Dcom.sun.management.jmxremote.rmi.port=[RMI_PORT]其中一个没有rmi.
     >ps 如果hosts文件中没有配置本机ip会产生以下异常`Error: Exception thrown by the agent : java.net.MalformedURLException: Local host name unknow: java.net.UnknownHostException: hostnamexxxx`解决方法在hosts文件中增加配置`本机ip:hostnamexxx`
     >有jstatd和jmx两种方式这里用是jmx的方式
-1. [eclipse MAT用法 ](https://blog.csdn.net/wanghuiqi2008/article/details/50724676)   
+1. [内存分析工具 MAT 的使用](https://blog.csdn.net/wanghuiqi2008/article/details/50724676)   
 1. [内存分析工具 MAT 的使用](https://blog.csdn.net/aaa2832/article/details/19419679)    
+1. [内存分析工具 MAT 的使用***](https://inter12.iteye.com/blog/1407492)  
+
 1. VisualVM的BTrace插件比较难用代替方案[arthas](https://github.com/alibaba/arthas),[greys](https://github.com/oldmanpushcart/greys-anatomy)，arthas是在greys的基础上二次开发然后开源的。      
     
