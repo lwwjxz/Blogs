@@ -36,6 +36,7 @@
     1. 初次读一个包含final域的对象的引用，与随后初次读这个final域，这两个操作之间不能重排序。编译器不可能出现这种重排序，这种主要是针对部分架构的CPU(不做深入研究)。    
     1. 构造函数中final引用对象成员变量写不能排序到构造函数外，推测成员变量的成员变量的写也不能重排序到构造函数外，这样用起来才简单合理。     
 1. [双重检查锁定与延迟初始化](http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization?utm_source=infoq&utm_campaign=user_page&utm_medium=link)       
-    1. 基于volatile的双重检查锁定的解决方案因为instance = new Instance()是分三步的，如果不用volatile这三步直接可以重排序当另一个线程执行外层的if (instance == null) 因为此线程没有获取锁所以有可能instance已经被分配内存(!=null)但是没有被实例化。      
+    1. 基于volatile的双重检查锁定的解决方案因为instance = new Instance()是分三步的，如果不用volatile这三步直接可以重排序当另一个线程执行外层的if (instance == null) 因为此线程没有获取锁所以有可能instance已经被分配内存(!=null)但是没有被实例化。   
+    1. 基于类初始化的解决方案主要是依赖于：在执行类的初始化期间，JVM 会去获取一个锁。这个锁可以同步多个线程对同一个类的初始化。
 
 
