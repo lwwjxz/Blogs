@@ -1,3 +1,4 @@
+1. 多线程的问题都是由重排序和内存可见性引起的。写出线程安全的多线程程序就是要正确的处理重排序和可见性问题。    
 1. [深入理解Java内存模型（一）——基础](http://www.infoq.com/cn/articles/java-memory-model-1?utm_source=infoq&utm_campaign=user_page&utm_medium=link)      
     1. JMM定义了线程和主内存之间的抽象关系：线程之间的共享变量存储在主内存（main memory）中，每个线程都有一个私有的本地内存（local memory），
     本地内存中存储了共享变量的副本。       
@@ -32,7 +33,7 @@
     1. lock,由于加锁和释放锁都操作了volitale保证了内存可见并禁止了重排序。     
 1. [深入理解Java内存模型（六）——final](http://www.infoq.com/cn/articles/java-memory-model-6?utm_source=infoq&utm_campaign=user_page&utm_medium=link)        
     1. 在构造函数内对一个final域的写入，与随后把这个被构造对象的引用赋值给一个引用变量，这两个操作之间不能重排序。    
-    1. 初次读一个包含final域的对象的引用，与随后初次读这个final域，这两个操作之间不能重排序。编译器不可能出现这种重排序，这种主要是针对部分架构的CPU。    
+    1. 初次读一个包含final域的对象的引用，与随后初次读这个final域，这两个操作之间不能重排序。编译器不可能出现这种重排序，这种主要是针对部分架构的CPU(不做深入研究)。    
     1. 构造函数中final引用对象成员变量写不能排序到构造函数外，推测成员变量的成员变量的写也不能重排序到构造函数外，这样用起来才简单合理。     
 1. [双重检查锁定与延迟初始化](http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization?utm_source=infoq&utm_campaign=user_page&utm_medium=link)       
     1. 基于volatile的双重检查锁定的解决方案因为instance = new Instance()是分三步的，如果不用volatile这三步直接可以重排序当另一个线程执行外层的if (instance == null) 因为此线程没有获取锁所以有可能instance已经被分配内存(!=null)但是没有被实例化。      
