@@ -1,4 +1,4 @@
-1. [参考](https://github.com/Snailclimb/JavaGuide/blob/master/Java%E7%9B%B8%E5%85%B3/Java%20IO%E4%B8%8ENIO.md#%E4%B8%80-java-io%EF%BC%8C%E7%A1%AC%E9%AA%A8%E5%A4%B4%E4%B9%9F%E8%83%BD%E5%8F%98%E8%BD%AF)   
+1. [nio简单demo](https://www.jianshu.com/p/02e16989f3a4)   
 2. [Scatter/Gather](http://ifeve.com/java-nio-scattergather/)
 3. [内存映射](https://blog.csdn.net/Evankaka/article/details/48464013)
     1. java通过java.nio包来支持内存映射IO。
