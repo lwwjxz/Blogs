@@ -1,0 +1,1 @@
+pipeline 和 valve 就是每个value都能getnext。pipelineke可以理解为valve的容器。 其实就是filter模式的实现方式。
