@@ -22,10 +22,5 @@
             root   html;
             index  index.html index.htm;
         }
-        location /recruitment/ {
-                proxy_set_header Host $host;
-                proxy_set_header X-Forward-For $remote_addr;
-                proxy_pass http://127.0.0.1:8085;
-       }
     }
 ```
