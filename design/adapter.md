@@ -5,5 +5,6 @@ methed(a){
   methed(a,null)
 }
 
-```
+```    
 1. 就是java的日志类。   
+
