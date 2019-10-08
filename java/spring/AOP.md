@@ -9,3 +9,4 @@
     point cut 是描述一类join point的规则。    
     advice 是想要在point cut 插入的代码。      
     aspect 是advice和point cut的组合。   
+1. [多个切面时的执行顺序](https://blog.csdn.net/qqXHwwqwq/article/details/51678595)  order最小的最先执行最后结束，filter模式。     
