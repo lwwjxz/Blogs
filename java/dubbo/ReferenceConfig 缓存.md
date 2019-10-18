@@ -1,0 +1,2 @@
+1. RferenceConfig 实例很重需要缓存，默认缓存在硬盘上，曾经遇到过老版本的dubbo多个dubbo在同一台机器上由于没有配置缓存存储位置造成冲突并且RferenceConfig实例
+占用的内存不断增长最后oom的bug。最后是通知设置缓存地址不同应用的RferenceConfig实例缓存在不同的目录解决的。
