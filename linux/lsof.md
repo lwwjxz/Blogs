@@ -1,4 +1,5 @@
-# [lsof 一切皆文件](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/lsof.html)
+# [lsof 一切皆文件](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/lsof.html)       
+# [常用实例](https://www.cnblogs.com/peida/archive/2013/02/26/2932972.html)      
 1. 实例1：无任何参数 `lsof| more`    
 2. 实例2: 查找某个文件相关的进程`lsof /bin/bash`
 3. 实例3：列出某个用户打开的文件信息`lsof -u username` 
