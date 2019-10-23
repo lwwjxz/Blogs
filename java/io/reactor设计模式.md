@@ -1,3 +1,4 @@
+[Doug Lea大神的ppt](http://gee.cs.oswego.edu/dl/cpjslides/nio.pdf)           
 1. Basic Reactor Design 每个请求一个线程。    
 1. Multi Threaded Dseigns 耗时请求交给线程池处理。跟Basic的比较少了生产和回收线程的资源消耗。      
 1. Multiple Reactors 两个Reactors线程，一个(也可以是多个但是一般没必要)线程Acceptor。多个线程监听(注册)读写事件。    
