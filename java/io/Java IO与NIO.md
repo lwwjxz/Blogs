@@ -1,3 +1,4 @@
+1. nio不需要等待网络等操作，直接把数据交给内核态或者直接从内核态中拿数据。         
 1. [nio简单demo](https://www.jianshu.com/p/02e16989f3a4)   
 2. [Scatter/Gather](http://ifeve.com/java-nio-scattergather/)
 3. [内存映射](https://blog.csdn.net/Evankaka/article/details/48464013)
