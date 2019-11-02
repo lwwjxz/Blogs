@@ -4,4 +4,7 @@
 3. 反射可以破坏单例模式，因为反射可以调用private方法
 4. [单例与序列化的那些事儿](https://www.hollischuang.com/archives/1144) 增加readResolve方法。
 5. [抵御clone攻击](https://zhuanlan.zhihu.com/p/28491630) 重写clone方法。
-6. [枚举序列化和反序列化没有问题](https://www.hollischuang.com/archives/2498)。
+6. [枚举序列化和反序列化没有问题](https://www.hollischuang.com/archives/2498)。     
+8. 单例模式的应用场景       
+    1. java.lang.Class类的对象都是单例的。      
+    1. spring 对象默认的为单例。     
