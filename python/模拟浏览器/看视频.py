@@ -17,7 +17,7 @@ commit = driver.find_element_by_xpath('//button[@id="loginbtn"]')
 commit.click()
 time.sleep(10)
 
-urls_file = open('urls.json')
+urls_file = open('urls.json') #打开当前运行目录下的文件
 url_array = json.load(urls_file)
 for item in url_array:
 	driver.get(item)
