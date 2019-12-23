@@ -11,4 +11,8 @@ select b.name from sysobjects b where xtype='V'; //视图
 select b.name from sysobjects b where xtype='U'; //用户表
 select b.name from sysobjects b where xtype='S'; //系统表
 ```
+4. 查看所有触发器 。          
+```
+SELECT   name, is_instead_of_trigger FROM  sys.triggers  WHERE  type = 'TR'
+```
 
