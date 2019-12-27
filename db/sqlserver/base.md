@@ -16,3 +16,18 @@ select b.name from sysobjects b where xtype='S'; //系统表
 SELECT   name, is_instead_of_trigger FROM  sys.triggers  WHERE  type = 'TR'
 ```
 
+5. 查看表结构
+```
+SELECT
+c.name as columnName,
+a.VALUE as columnDescript
+FROM
+sys.extended_properties a,
+sysobjects b,
+sys.columns c
+WHERE
+a.major_id = b.id
+AND c.object_id = b.id
+AND c.column_id = a.minor_id
+AND b.name = 'TableName';
+```
