@@ -4,3 +4,4 @@
 1. [NERDTree配置和快捷键](https://blog.csdn.net/Demorngel/article/details/69053717)          
     1. 光标移到目录`ctrl + w + h` ,光标移到编辑器`ctrl +w + l`
 1. [NERDTree官方快捷键文档](https://github.com/scrooloose/nerdtree/blob/master/doc/NERDTree.txt)                   
+    1. ma新建文件或目录
