@@ -1,4 +1,3 @@
-
 " Configuration file for vim
 set modelines=0		" CVE-2007-2438
 
@@ -51,8 +50,13 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 "Plugin 'suan/vim-instant-markdown'
 "Plugin 'JamshedVesuna/vim-markdown-preview'
 " 显示目录树
-"Plug 'vbundles/nerdtree'
 Plug 'scrooloose/nerdtree'
+" 所有的tab显示一样的tree
+Plug 'jistr/vim-nerdtree-tabs'
+" 显示git状态
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" git插件
+Plug 'tpope/vim-fugitive'
 " 你的所有插件需要在下面这行之前
 call plug#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
@@ -60,10 +64,10 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 "filetype plugin on
 "
 " 简要帮助文档
-" :PluginList       - 列出所有已配置的插件
-" :PluginInstall    - 安装插件,追加 `!` 用以更新或使用 :PluginUpdate
-" :PluginSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
-" :PluginClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
+" :PlugList       - 列出所有已配置的插件
+" :PlugInstall    - 安装插件,追加 `!` 用以更新或使用 :PluginUpdate
+" :PlugSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
+" :PlugClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
 "
 " 查阅 :h vundle 获取更多细节和wiki以及FAQ
 " 将你自己对非插件片段放在这行之后
@@ -112,6 +116,23 @@ let NERDTreeShowLineNumbers = 1
 let NERDTreeAutoCenter = 1
 "自动打开NERDTree
 autocmd VimEnter * NERDTree
+">> NERDTREE-GIT
+  " Special characters
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+   \ }
+">> NERDTree-Tabs
+let g:nerdtree_tabs_open_on_console_startup=1 "Auto-open Nerdtree-tabs on VIM enter
+
 "NERDTree配置=========================================================================end
 "
 "markdown-preview配置=========================================================================start
