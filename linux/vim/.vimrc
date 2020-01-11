@@ -64,7 +64,7 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 "filetype plugin on
 "
 " 简要帮助文档
-" :PlugList       - 列出所有已配置的插件
+" :PlugStatus       - 列出所有已配置的插件
 " :PlugInstall    - 安装插件,追加 `!` 用以更新或使用 :PluginUpdate
 " :PlugSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
 " :PlugClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
