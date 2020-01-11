@@ -1,0 +1,247 @@
+" Press ? for help
+
+>----------Bookmarks----------
+
+.. (up a dir)
+/Users/lww/Blogs/
+▸  .net/
+▸  algorithm/
+▸  bigdata/
+▸  blockchain/
+▸  c++/
+▸  cache/
+▸  cpu/
+▸  daily/
+▸  data/
+▸  db/
+▸  design/
+▸  dingding/
+▸  distributed/
+▸  docker/
+▸  english/
+▸  git/
+▸  http/
+▸  im/
+▸  image/
+▸  Interview/
+▾ [✗] java/
+  ▸  advanced/
+  ▸  Annotation/
+  ▸  apm/
+  ▸  array/
+  ▸  classloader/
+  ▸  clone/
+  ▸  Collection/
+  ▸  concurrent/
+  ▸  dubbo/
+  ▸  exception/
+  ▸  function/
+  ▸  generic/
+  ▸  guava/
+  ▸  hibernate/
+  ▸  innerclass/
+  ▸  IntrospectionAndReflection/
+  ▸  io/
+  ▸  java8/
+  ▸  javaagent/
+  ▸  jetty/
+  ▸  jmx/
+  ▸  jndi/
+  ▾ [✗] jvm/
+       arthas.md
+       Code Cache.md
+       dump分析.md
+       FinalReference 与 Finalizer 详解 .pdf
+       FinalReference.md
+       gc.md
+       gclog分析.md
+       gc日志.md
+       HotSpot.md
+       lecture.md
+      [✭] Metaspace.md
+       OOM常见原因.md
+       ram.md
+       ReferenceQueue.md
+       speak.md
+       tool.md
+       内存分配.md
+       内存泄漏.md
+       参数.md
+       字面量，常量和变量之间的区别.md
+       对象内存布局.md
+       常见的oom.md
+       常量池.md
+       引用类型.md
+       栈帧.md
+       深入理解java虚拟机笔记.md
+       类加载过程详解.md
+       类的初始化和实例化.md
+       默认线程.md
+       .dump分析.md.swp
+  ▸  log/
+  ▸  mac/
+  ▸  maven/
+  ▸  message/
+  ▸  mybatis/
+  ▸  package/
+  ▸  persistence/
+  ▸  proxy/
+  ▸  security/
+  ▸  servlet/
+  ▸  spi/
+  ▸  spring/
+  ▸  swagger/
+  ▸  test/
+  ▸  thread/
+  ▸  tomcat/
+  ▸  web/
+  ▸  webContainer/
+  ▸  webservice/
+     compare.md
+     crash.md
+     dapper.md
+     dubbo VS springCloud.md
+     DubboProvider线程分析.md
+     HashCodeAndEquals.md
+     java 的 System.getenv() 和 System.getProperty().md
+     java命令.md
+     java项目搭建笔记.md
+     jdbc.md
+     jdk安装.md
+     jit.md
+     jndi.md
+     jpa.md
+     leak.md
+     mongo配置.md
+     spi.md
+     yml配置.md
+     优雅关闭.md
+     微服务.md
+     知识点.md
+▸  javascript/
+▸  jekins/
+▾  linux/
+  ▾  vim/
+       .vimrc
+       buffer,window,tab.md
+       vim.md
+       vim插件管理.md
+  ▸  字体安装/
+     apt.md
+     awk.md
+     bash_completion.md
+     bc.md
+     centos开机启动.md
+     coreDump.md
+     crontab.md
+     find.md
+     inode,软连接,硬链接.md
+     kill.md
+     Linux Shell 通配符、元字符、转义符使用实例介绍.md
+     Linux中profile、bashrc、bash_profile之间的区别和联系.md
+     ls.md
+     lsof.md
+     more:less:head:tail.md
+     netstat.md
+     nio.md
+     nohup.md
+     printf.md
+     ps.md
+     root用户和sudo 执行进程的区别.md
+     rsync.md
+     scp.md
+     sed.md
+     service.md
+     shell.md
+     shell脚本实例.md
+     shell调试.md
+     shell转化为二进制.md
+     shell配置.md
+     simpleTool.md
+     ssh.md
+     top.md
+     ubuntu server和desktop区别.md
+     ubuntu安装.md
+     ubuntu安装软件.md
+     ubuntu设置.md
+     user.md
+     wget.md
+     zsh.md
+     内存.md
+     句柄雪崩?.md
+     启动级别.md
+     命令.md
+     命令行光标移动技巧.md
+     字体.md
+     性能相关命令.md
+     文件签名.md
+     文件系统.md
+     文本处理示例.md
+     标准输出重定向.md
+     概念.md
+     环境变量.md
+     用户管理.md
+     电脑硬件配置查看.md
+     磁盘相关.md
+     简单监控.md
+     系统信息和基本工具.md
+     编码.md
+     编译安装.md
+     补全.md
+     软件安装.md
+     进制转换.md
+     进程管理.md
+     防火墙.md
+▸  mac/
+▸  manage/
+▸  message/
+▸  microservice/
+▸  mongo/
+▸  mysql/
+▸  net/
+▸  netty/
+▸  nginx/
+▸  oo/
+▸  python/
+▸  security/
+▸  technicalManagement/
+▸  test/
+▸  time/
+▸  tool/
+▸  transactions/
+▸  webservice/
+▸  windows/
+▸  zk/
+▸  交接/
+▸  产品/
+▸  思考力/
+▸  架构结构/
+▸  监控/
+▸  选型/
+   .gitignore
+   coming.md
+   core.md
+   dtd vs xsd .md
+   idea创建项目流程.md
+   LICENSE
+   mapReduce.md
+  [✹] plan.md
+   saas.md
+   temp.md
+   today.md
+   tostudy.md
+   事物的局限性.md
+   亿级流量网站核心技术.md
+   单点登录.md
+   命名服务.md
+   基本概念.md
+   多租户.md
+   工作交接.md
+   心得.md
+   技术选型.md
+  [✭] 架构师路技能.md
+   由于处理问题的量级不同引起的解决方案的不同.md
+   电商.md
+   语法糖.md
+   重要.md
+   静态vs动态语言.md
