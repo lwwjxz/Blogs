@@ -1,7 +1,6 @@
 [参考](https://tier1app.files.wordpress.com/2014/12/outofmemoryerror2.pdf)
 出现的频率依次递减
 
-
 |原因|解决方法|
 --|--|
 代码没问题确实需要更多的内存|优化代码，如果无法优化只能修改xmx了
