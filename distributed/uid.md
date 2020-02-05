@@ -13,5 +13,5 @@
   1. Twitter snowflake算法 依赖于机器的始终如果各个机器的始终不同步可能造成小范围无序。时钟回拨的问题  
   1. 百度 snowflake 机器码是动态获取的跟Twitter snowflake相比不用    
   1. [美团Leaf](https://tech.meituan.com/2017/04/21/mt-leaf.html)   
-    1. Leaf segment   
+    1. Leaf segment : 适合不怕保留信息，也不需要日期信息的场景     
     1. Leaf snowflake  workId一样的时候也就是同一台机器的时候时钟回调才会导致uid的重复    
