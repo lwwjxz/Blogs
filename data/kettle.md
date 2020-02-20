@@ -12,3 +12,5 @@ MSSQL/user=aaaa
 
 MSSQL/password=xxxxx
 ```
+
+1. kettle默认情况下把空字符串当作NULL处理，解决办法：家目录下的.kettle目录中找到kettle.properties文件，增加:KETTLE_EMPTY_STRING_DIFFERS_FROM_NULL=Y
