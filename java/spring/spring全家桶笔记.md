@@ -13,3 +13,6 @@
    1. 关注releaseNote，和change list。       
    2. spring 5.0 不支持java8以前的支持。       
    3. 
+   
+10. spring-boot-start-parent 经过了严格的测试，解决了版本冲突问题，不用我们手动解决。如果需要自定义parent可以在父pom中引入spring-boot-dependencies和spring-boot-maven-plugin来实现和spring-boot-start-parent 一样的功能。    
+-
