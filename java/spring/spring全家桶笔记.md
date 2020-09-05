@@ -13,6 +13,7 @@
    1. 关注releaseNote，和change list。       
    2. spring 5.0 不支持java8以前的支持。       
    3. 
-   
-10. spring-boot-start-parent 经过了严格的测试，解决了版本冲突问题，不用我们手动解决。如果需要自定义parent可以在父pom中引入spring-boot-dependencies和spring-boot-maven-plugin来实现和spring-boot-start-parent 一样的功能。    
--
+10. Spring boot 和 Spring Cloud 的出现是必然的。
+  1. 开箱即用，业务逻辑之外的非功能性的东西大家都需要实现，为什么不抽出来呢？spring boot 做了很多这样的事情，比如？？？？？？？
+  2. spring cloud 和生态圈有非常紧密的整合。     
+  3. 注重运维：
