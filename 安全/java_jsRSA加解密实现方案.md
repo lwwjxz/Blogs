@@ -1,12 +1,14 @@
 1. java端生成公私钥     
+```
         KeyPairGenerator kpGen = KeyPairGenerator.getInstance("RSA");
         kpGen.initialize(1024);
         KeyPair kp = kpGen.generateKeyPair();
         String privateKeyStr = Base64.getEncoder().encodeToString(kp.getPrivate().getEncoded());
         String publicKeyStr = Base64.getEncoder().encodeToString(kp.getPublic().getEncoded());
         System.out.println("私钥: "+ privateKeyStr);
-        System.out.println("公钥: "+ publicKeyStr);
-       
+        System.out.println("公钥: "+ publicKeyStr);     
+```
+
 2. js端加密       
 
 ```
