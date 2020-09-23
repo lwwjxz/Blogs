@@ -37,23 +37,6 @@ public class RsaTest2 {
         public static String publicKeyString="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCesgzN/Id2MsV1cBQ1dO3X+OgmqX4MJoOBfue3uuO4jcQJT5I/vJsgLbQNiXSbjnMFICZkIC2uu1v6PwS6NeNOxtsyibBjXMw5RISzkjmbZVIln/gq3bBtQW69vKzR/ogwJTP5zfGgizAnbacUsuVGK6TM0qIfTHr8gul/Nyz/4QIDAQAB";
         public static String privateKeyString= "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAJ6yDM38h3YyxXVwFDV07df46Capfgwmg4F+57e647iNxAlPkj+8myAttA2JdJuOcwUgJmQgLa67W/o/BLo1407G2zKJsGNczDlEhLOSOZtlUiWf+CrdsG1Bbr28rNH+iDAlM/nN8aCLMCdtpxSy5UYrpMzSoh9MevyC6X83LP/hAgMBAAECgYBMpOmSQriZ2YOMaIkaGFMWz9wvcAS0kZVJ4aTAE78Pz0gyxv93UPwK2ofvUcfDqVTb0N851GC71zlg7za1SHlzOUjTrw/3KTySb8dvtBNJKUBreSsFVJk7aAMehzLT3VAbNv3bOz1i49+cvHOqseshul6hl5h0WPLnmlSFvgNbAQJBAO0p5+iGKhWxWTwnUFfROfasKMivgbyrv98hqUbBizkl/zyEYYzXNEIagskz00xCqZb7oP/Mr1doIQ1oGpiS6BkCQQCrTLOtRHFuSQLv/Rzd7ArjAU+dzotu3k7XhhA0K07sLHNNWyu8x3zvvaxwS7p7Iaj93bX67vagajwuVJXOYG8JAkEAiww+w72lfwJz5yjFmjc5XL6jSsZbslqgLBp4PNvM3LzCYKDc8M5b/UW92GliQRv0gmkVg+RmCUEr38hhj4LSQQJAbLkWIZcbV6BHmQLR25kBn+spGUQLA6dd6zVP+4yxXv0ngaWoMP18sr10QSIPji9jDx41brtVFaPX5qARJRfX4QJBAKUm+nv3jCCghLKMcIJq2DBTl1IrvfO/fv/Uqpk4p8ZL99ATtxwyCsiLpRnLaSFnPZ8VwIEaYgaHStsuHkj5ytI=";
 
-
-    //public static String privateKeyString ="MIICXAIBAAKBgQDTW7cbyXDzQ0dNIsIVpaye7RMTEN79oCt4XcCU8tgPHVVBgC/+"
-    //    + "4YJwUlbysxwpGd+W83Np8LQ8fejdWx7s3Wwx1xvTcdfdkna0ZkkYHBJaPd+mkBV+"
-    //    + "/fkh+v4T+htqImhiR+rHFuKjMsi1hRZPI74ixJnZVGxOWJaqHuIPxFDZTwIDAQAB"
-    //    + "AoGAObiwdyw6ZpUXId++NX87d2Ozc9+FpqpZdNPVxlfT3bzbDbpeYTNhFh/Gkx2L"
-    //    + "MUZZo7X07RfJgUO5lspN1c5av3pR5UVLtdbmI7+DhUc25i/oos5hvTs1QkOCoU93"
-    //    + "a1xx07xr0wl5E2AIQBtm7ANqP0c9FL3aFnX2p5ysAE9fZRECQQD8L7jOseuId5Rv"
-    //    + "4+rM0eAPYdTRf++WifMGhblSMKLuFuUjwhK8JZkjB20NQwp11HrvEoI/xCNrLuDH"
-    //    + "/AHNdB1TAkEA1o3v6SJpHpCjGZApS003OxEMB7HbiocMgG3fVOtH/jTSjo2UNfLk"
-    //    + "r3/UTUXJ5S1FhU+Ow6jvgsXZ05JPI5QYlQJBAMnzZWmQrW9xY1tfB27SOz3WOFk0"
-    //    + "vKau/gEhIVEiRbeoegLyrZIiAco9biUKpNvLNk8xYUCzTzHMLpG3y7G95KUCQAIo"
-    //    + "TThH60yuYaV5KKEkNqD2a+uL40xCTWLhN/SvpPquZ0udqtbcCWamX2kjgYM3cFKF"
-    //    + "2UaoZTgoaydQelE+RP0CQGzGOOpCV8VpF9EYrG7RIc9Zm+wTyKiV31TwRosJYV+k"
-    //    + "oZKh1q9SxxbMjx/cbE1ihjUV/UztWcKcQmILy2XtK24";
-    //public static String publicKeyString = "AAAAB3NzaC1yc2EAAAADAQABAAAAgQDTW7cbyXDzQ0dNIsIVpaye7RMTEN79oCt4XcCU8tgPHVVBgC/+4YJwUlbysxwpGd+W83Np8LQ8fejdWx7s3Wwx1xvTcdfdkna0ZkkYHBJaPd+mkBV+/fkh+v4T+htqImhiR+rHFuKjMsi1hRZPI74ixJnZVGxOWJaqHuIPxFDZTw";
-
-
     public static void main(String[] args) throws Exception {
             // TODO Auto-generated method stub
 
@@ -69,7 +52,7 @@ public class RsaTest2 {
             System.out.println("加密后："+new String(encryptedBytes));
 
             //私钥解密
-            byte[] decryptedBytes=decrypt(Base64.getDecoder().decode("CFxSLbLuiYvBizvKlXkzsEX2e3iRpcFEbbbk1PlknBmfsl2B7EJ+j6USTPtIwS4ncA/cLoEfWjFHY9CwU7BJ9plVXbefH1HxQ6rlOUAMS5qbKQ9Ep5+E4RfuYlAWNgBTB/+JJNPatIVAJt3ofdYFU7JFj5VKGwdMvbccQkLeI+o="), privateKey);
+            byte[] decryptedBytes=decrypt(encryptedBytes, privateKey);
             System.out.println("解密后："+new String(decryptedBytes));
         }
 
