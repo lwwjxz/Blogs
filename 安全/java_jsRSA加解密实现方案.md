@@ -8,6 +8,8 @@
         System.out.println("公钥: "+ publicKeyStr);
        
 2. js端加密       
+
+```
         <!DOCTYPE html>
         <html>
         <head>
@@ -27,10 +29,10 @@
         </script>
 
         </body>
-        </html>
-        
+        </html>     
+        ```
 3. java端解密
-
+```
 public class RsaTest2 {
 
         public static String data="hello 中国";
@@ -90,3 +92,4 @@ public class RsaTest2 {
 
 
 }
+```
