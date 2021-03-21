@@ -1,5 +1,6 @@
-1. 安装的过程需要编译的需要先安装xcode`  xcode-select --install`      
-1. 跟换镜像命令
+1. 安装的过程需要编译的需要先安装xcode`  xcode-select --install`    
+2. 需要vpn。 
+3. 跟换镜像命令
   ```
   # 进入brew主目录
   $ cd `brew --repo`
