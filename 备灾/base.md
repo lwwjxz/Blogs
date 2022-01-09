@@ -5,4 +5,4 @@
 5. [备灾体系建设的国际标准](http://www.rongzai.com.cn/baike/10111H020.html)    
    ![image](https://user-images.githubusercontent.com/12959356/148673216-ae7e8bb0-833b-4d38-9f06-460ae017b1cd.png)     
 6. [PATM](https://baike.baidu.com/item/PTAM/602168)     
-
+7. 阿里云混合云存储容灾方案: HDR      
