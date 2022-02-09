@@ -1,4 +1,4 @@
-1. [https://github.com/lwwjxz/javacore/blob/master/docs/basics/java-generic.md][泛型] ，看第一条就够了下面都是重复的。  
+1. https://github.com/lwwjxz/javacore/blob/master/docs/basics/java-generic.md ，看第一条就够了下面都是重复的。  
     类型边界和类型通配符是不同的东西没有可比性，不能因为他们格式有点像就老纠结这两纠结他们有啥不一样。就像在问是桌子好还是凳子好。
     1.0优点    
        1.0.1 编译时的强类型检查，保证了类型安全。     
