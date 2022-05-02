@@ -13,6 +13,7 @@
     1. Each class loader is designed to load classes from different locations. For instance, you can actually create a class loader that will load a class file from a networked server or download the binary of a class from a remote web server, etc. The logic that performs this operation is baked into the class loader itself and provides a consistent interface so that clients can load classes regardless of how the class loader actually performs the loading. The BootstrapClassLoader is capable of loading classes from the JVM_HOME/lib directory...but what if you need to load them from a different location??     
 In short, because there as an infinite (well, not quite) number of ways to load classes and there needs to be a flexible system to allow developers to load them however they want.
     2. 在需要多个classLoader的前提下，好处就显而易见。a. 减少了类的重复加载.  b. 保证了安全性。因为Bootstrap ClassLoader在加载的时候，只会加载JAVA_HOME中的jar包里面的类，如java.lang.Integer，那么这个类是不会被随意替换的，除非有人跑到你的机器上， 破坏你的JDK。    
-1. [类的加载过程](https://blog.csdn.net/zhangliangzi/article/details/51319033)    
+1. [类的加载过程](https://blog.csdn.net/zhangliangzi/article/details/51319033)     
+2. [ClassLoader 传递性](http://blog.itpub.net/31561269/viewspace-2222522/),程序在运行过程中，遇到了一个未知的类，它会选择哪个 ClassLoader 来加载它呢？虚拟机的策略是使用调用者 Class 对象的 ClassLoader 来加载当前未知的类。          
  
        
