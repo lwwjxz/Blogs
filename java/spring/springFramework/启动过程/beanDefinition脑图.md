@@ -20,3 +20,11 @@
 ## isLazyInit 是否懒加载 beanFactory默然懒加载，applicationContext默认非懒加载   
 ## isPrototype scope是否Prototype    
 ## isSingleton scope是否Singleton    
+# AbstractBeanDefinition
+## getAutowireMode 自动装配模型      
+### no 不自动装配需要在xml 或通过注解设置      
+### byName 通过属性的名字自动注入     
+### byType 通过属性的类型自动注入     
+### byConstructor 通过构造函数注入    
+### addQualifier 添加依赖的属性入围者
+### ````
