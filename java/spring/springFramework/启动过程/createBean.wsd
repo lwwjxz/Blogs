@@ -1,0 +1,20 @@
+@startuml
+:prepareMethodOverrides 重写bean方法(lookup-method 和 replace-method);
+:Give BeanPostProcessors a chance to return a proxy instead of the target bean instance;
+if (上一步返回bean不为null) then (yes)
+    stop
+else (no)
+   if (是否单例) then (yes)
+     :获取unfinished FactoryBean instances;     
+   endif
+endif
+if (上一步返回instanceWrapper为空) then (yes)
+  :createBeanInstance;
+endif 
+  :applyMergedBeanDefinitionPostProcessors(修改beanDefinition);
+if (单例 and 运行循环依赖 and 正在create) then (yes)
+  :add factoryBean to singletonFactories;
+endif
+  :populateBean;
+  :initializeBean;
+@enduml

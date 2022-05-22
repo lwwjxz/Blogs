@@ -1,0 +1,29 @@
+@startuml
+:从单例缓存getbean;
+if (bean是否在缓存中) then (yes)
+  :根据beanName判断客户端获取的是factoryBean还是bean返回对应的bean;
+  stop 
+else (no)
+  if (判断是否是创建中的PrototypeBean) then (yes) 
+    :抛出异常;
+    stop
+  else (no)
+    if (容器中没有对应的beanDefinition且存在父容器) then (yes)
+      :从父容器获取;
+      stop
+    else (no)
+      :创建或获取MergedBean;
+      :获取依赖的bean;
+      if (单例) then (yes)
+        :createBean;
+        :addSingleton;
+      elseif (原型) then (yes)
+        :createBean;
+      else (no)
+        :scope.getBean 对应的scope获取bean的逻辑;
+      endif
+      stop
+    endif
+  endif
+endif
+@enduml
