@@ -5,5 +5,6 @@
 1. 跟mockIto比不支持spy。     
 # JMockit
 1. 可以mock静态方法。    
-# powerMockt    
-1. PowerMock基本上cover了所有Mockito不能支持的case（大多数情况也就是静态方法，但其实也可以支持私有方法和构造函数的调用）    
+# powerMockito    
+1. PowerMock基本上cover了所有Mockito不能支持的case（大多数情况也就是静态方法，但其实也可以支持私有方法和构造函数的调用）  
+2. 与mockito的版本匹配https://github.com/powermock/powermock/wiki/Mockito  
