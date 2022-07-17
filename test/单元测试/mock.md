@@ -8,3 +8,8 @@
 # powerMockito    
 1. PowerMock基本上cover了所有Mockito不能支持的case（大多数情况也就是静态方法，但其实也可以支持私有方法和构造函数的调用）  
 2. 与mockito的版本匹配https://github.com/powermock/powermock/wiki/Mockito  
+3. 私有方法 https://www.jianshu.com/p/aaa1743da768
+
+
+# 测试覆盖率的统计相关问题
+1. https://blog.csdn.net/yezhixinghuo/article/details/109552795
