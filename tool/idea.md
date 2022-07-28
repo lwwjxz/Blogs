@@ -4,3 +4,7 @@
 2. debug插件源码    
    将插件源码加入lib即可      
    ```Go to "Project Structure" > "Libraries" > "+" > "Java" and add the path of the Jar.```
+
+3. find Useage jar中的代码，必须啊先download source。   
+4. idea 配置自动下载源码
+   ```File => Setting => Build, Execution, Deployment => Build Tools => Maven => Importing 然后勾选自动下载 Sources，Documentation即可```
