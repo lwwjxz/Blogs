@@ -9,4 +9,9 @@
     point cut 是描述一类join point的规则。    
     advice 是想要在point cut 插入的代码。      
     aspect 是advice和point cut的组合。   
-1. [多个切面时的执行顺序](https://blog.csdn.net/qqXHwwqwq/article/details/51678595)  order最小的最先执行最后结束，filter模式。     
+1. [多个切面时的执行顺序](https://blog.csdn.net/qqXHwwqwq/article/details/51678595)  order最小的最先执行最后结束，filter模式。   
+2. [基本概念](https://www.cnblogs.com/xxkj/p/14094203.html)    
+   1. AspectJ 能干很多 Spring AOP 干不了的事情，它是 AOP 编程的完全解决方案。   
+   2. SpringAOP：它基于动态代理来实现AOP。如果使用接口的，用JDK提供的动态代理实现，如果没有接口，使用 CGLIB 实现。Spring AOP 致力于解决的是企业级开发中最普遍的 AOP 需求（方法织入），而不是力求成为一个像 AspectJ 一样的 AOP 编程完全解决方案。      
+   3. join point等关键概念   
+3. 
