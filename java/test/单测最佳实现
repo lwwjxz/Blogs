@@ -1,0 +1,55 @@
+pom
+```
+        <powermock.version>2.0.9</powermock.version>
+        <mockito.version>2.28.2</mockito.version>
+        
+        <dependency>
+        
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <!--mockito-all已过时 -->
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-core</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito2</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4-rule-agent</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+```
+
+```
+powermock要mock的私有方法静态所在的类，放在测试类上
+@PrepareForTest(xxxxx.class)
+
+
+//不加下面的配置测试覆盖率统计不到
+    //测试覆盖率统计相关配置
+    @Rule
+    public PowerMockRule rule = new PowerMockRule();
+    static {
+        PowerMockAgent.initializeIfNeeded();
+    }
+    //测试覆盖率统计相关方配置
+
+
+```
