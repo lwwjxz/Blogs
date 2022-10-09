@@ -8,3 +8,8 @@
 3. find Useage jar中的代码，必须啊先download source。   
 4. idea 配置自动下载源码
    ```File => Setting => Build, Execution, Deployment => Build Tools => Maven => Importing 然后勾选自动下载 Sources，Documentation即可```
+5. 代码检查 
+   ```Analyze => inpectCode ```
+   结果出来后可以设置要检查的项
+   ![image](https://user-images.githubusercontent.com/12959356/194757755-a4e2c089-35ec-496d-bebd-0712e0a7a607.png)
+
