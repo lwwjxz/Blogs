@@ -12,4 +12,5 @@
    ```Analyze => inpectCode ```
    结果出来后可以设置要检查的项
    ![image](https://user-images.githubusercontent.com/12959356/194757755-a4e2c089-35ec-496d-bebd-0712e0a7a607.png)
+6. 方法的调用链，```control + option + H```
 
