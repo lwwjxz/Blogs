@@ -48,4 +48,19 @@
         </root>
     </springProfile>
 </configuration>
-  ```
+  ```   
+1. 包含logback-core, logback-classic and logback-access. 三模块    
+    1. logback-core 基础模块，可以在该模块之上自定义自己的模块。      
+    2. logback-classic 实现了SLF4J可以方便的切换成log4f，jul等框架。
+    3. logback-access 与Tomcat，Jetty等容器集成，提供http访问日志功能。   
+2. LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();    
+    1. 日志上下文
+    2. logger的级别，设置就就用
+    3. 日志的Hierarchy，是一棵树：https://logback.qos.ch/manual/architecture.html,日志级别是自己配置了就用自己的，没配置就往上找最近的祖先的级别   
+    4. 同一个名字只有一个实例对象(同名单例)    
+3. 配置一般是在代码初始化的时候完成的。     
+4. appender 日志输出的目的地，一般为控制台、文件、远程套接字服务器、MySQL、PostgreSQL、Oracle和其他数据库、JMS以及远程UNIX Syslog守护程序都有附加程序。
+5. 一个logger可以链接多个appender。apppender会继承，可以配置<logger name="MONITER_FILE" additivity="false">中断继承。    
+6. 
+ 
+   
