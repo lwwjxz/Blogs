@@ -61,6 +61,9 @@
 3. 配置一般是在代码初始化的时候完成的。     
 4. appender 日志输出的目的地，一般为控制台、文件、远程套接字服务器、MySQL、PostgreSQL、Oracle和其他数据库、JMS以及远程UNIX Syslog守护程序都有附加程序。
 5. 一个logger可以链接多个appender。apppender会继承，可以配置<logger name="MONITER_FILE" additivity="false">中断继承。    
-6. 
+6. 日志打印流程图:https://logback.qos.ch/manual/underTheHood.html
+7. 日志打印是线程安全的。       
+8. 并发打印时日志的顺序？    
+9. 配置文件的加载顺序: logback-test.xml,logback.xml
  
    
