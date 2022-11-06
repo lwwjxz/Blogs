@@ -3,4 +3,14 @@
 3. webpack的本身的功能是有限的
   1. 开发模式：仅能编译js的ES Module语法。  
   2. 生产模式：能编译js的ES Module语法，还能压缩js。    
-4. 
+4. 核心概念
+    1. entry
+    2. output
+    3. loader webpack仅能处理js、json等功能，要处理css等资源需要借助loader   
+    4. plugins
+    5. mode  开发和生产
+5. 配置文件只能放在根目录下，文件名只能叫webpack.config.js     
+    1. entry用绝对路径
+    2. output 要用绝对路径
+7. . 常用命令
+  1. npx webpack 入口文件  --mode-development(production)   
