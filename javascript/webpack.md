@@ -18,7 +18,7 @@
   1. 生产和开发用不同的配置文件。   
   2. npx webpack serve --config ./配置文件位置
   3. npx webpack --config ./配置文件位置    生产模式下只打包不需要启动server。
-11. 默认情况下css会被打包到js里边，网络不好的时候可能出现闪屏现象，原因是浏览器会先解析html再加载js然后在解析css，所以需要把css单独打包成单独的文件然后通过link标签直接写到html页面。
+11. 默认情况下css会被打包到js里边，网络不好的时候可能出现闪屏现象，原因是浏览器会先解析html再加载js然后在解析css，所以需要把css单独打包成单独的文件然后通过link标签直接写到html页面。对应插件 MiniCssExtractPlgin。
 
 12. . 常用命令
   1. npx webpack 入口文件  --mode-development(production)   
