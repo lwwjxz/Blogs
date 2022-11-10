@@ -10,6 +10,20 @@
     4. plugins
     5. mode  开发和生产
 5. 配置文件只能放在根目录下，文件名只能叫webpack.config.js：配置文件解释官网: https://webpack.docschina.org/configuration/     
+6. webpack默认输出文件都在dist没有分目录，想分目录可以配置。   
+7. webpack 打包不会删除上次打包的内容，可以配置
+8. 代码格式处理 ESlint
+9. webpack 只能编译ES6的模块化语法，其他的像箭头函数之类的ES6语法没有处理，会导致IE等浏览器无法解析。这就需要babel来处理  
+10. 发布生产环境
+  1. 生产和开发用不同的配置文件。   
+  2. npx webpack serve --config ./配置文件位置
+  3. npx webpack --config ./配置文件位置    生产模式下只打包不需要启动server。
+ 
 
-6. . 常用命令
-  3. npx webpack 入口文件  --mode-development(production)   
+12. . 常用命令
+  1. npx webpack 入口文件  --mode-development(production)   
+  2. 安装开发服务器 npm i webpack-dev-server -D   
+  3. npx webpack serve 启动项目服务器，开发服务器不会把编译后的文件输出到dist，而是保存在内存中。
+
+12. 
+
