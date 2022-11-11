@@ -25,5 +25,11 @@
   2. 安装开发服务器 npm i webpack-dev-server -D   
   3. npx webpack serve 启动项目服务器，开发服务器不会把编译后的文件输出到dist，而是保存在内存中。
 
-12. 
+
+13 高级
+  1. SourceMap: 代码报错后提示源代码中的行数       
+  2. OneOf: 打包时每个文件都会经过所有的load处理，虽然因为有test的正则实际没匹配的就不会处理但是都要过一遍。也会拖慢速度。    
+  3. Include/Exclude:开发时用到的第三方库或插件。Include、Exclude互斥的只能二选一     
+  4. Cache: 每次打包成js都要经过EsLint检查和Babel编译，速度比较慢。可以用Cache实现每次只检查和编译修改过的文件。   
+  5. Thread: 多线程打包。非常大的项目打包设置以小时为单位的。但是小项目不需要，因为线程启动也是需要时间的。        
 
