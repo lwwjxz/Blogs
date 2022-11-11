@@ -25,11 +25,20 @@
   2. 安装开发服务器 npm i webpack-dev-server -D   
   3. npx webpack serve 启动项目服务器，开发服务器不会把编译后的文件输出到dist，而是保存在内存中。
 
+13. loader和plugins 区别:   
+While loaders are used to transform certain types of modules, plugins can be leveraged to perform a wider range of tasks like bundle optimization, asset management and injection of environment variables.相对于loader转换指定类型的模块功能，plugins能够被用于执行更广泛的任务比如打包优化、文件管理、环境注入等
 
-13 高级
+14. 高级
   1. SourceMap: 代码报错后提示源代码中的行数       
   2. OneOf: 打包时每个文件都会经过所有的load处理，虽然因为有test的正则实际没匹配的就不会处理但是都要过一遍。也会拖慢速度。    
   3. Include/Exclude:开发时用到的第三方库或插件。Include、Exclude互斥的只能二选一     
   4. Cache: 每次打包成js都要经过EsLint检查和Babel编译，速度比较慢。可以用Cache实现每次只检查和编译修改过的文件。   
   5. Thread: 多线程打包。非常大的项目打包设置以小时为单位的。但是小项目不需要，因为线程启动也是需要时间的。        
+  6. Tree Shaking: 摇树把不用的代码摇下来，依赖ES module，CommonJs不行。    
+  7. plugin-transform-runtime: 禁用Babel自动对每个文件runtime注入。而是引入plugin-transform-runtime并使所有辅助代码从这里引用。   
+  8. image minimizer: 图片压缩
+  9. code split: webpack会默认将所有js打包成一个文件。加载会很慢，可以分割成多个按需加载。   
+  10. preLoad:默认预加载   preFetch:空闲时预加载，  预加载是在code split的基础上的。
+  11. corejs，虽然babel解决了大部分兼容性问题，但是遇到低版本的浏览器还是不够，用corejs可以彻底解决问题。    
+  12. PWA:  通过service-worker.js
 
