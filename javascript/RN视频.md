@@ -18,4 +18,15 @@
     4. jsx中必须有且只有一个根标签
     5. 注释要放在{}中，相当于js代码。    
 9. 在React中构造函数就是一个基本的组件。   
-10. React解析jsx的标签是是安装标签首字母的大小写区分的，如果标签首字母为小写就按照html标签解析，如果为大写
+10. React解析jsx的标签是是安装标签首字母的大小写区分的，如果标签首字母为小写就按照html标签解析，如果为大写安装组件解析。   
+11. ```...obj``` ES6中的属性扩散，表示将对象展开放到这个位置。
+    ```
+    var person = {
+    name:'erdan',
+    age:5,
+    gender:'男'
+    }
+    
+    ...person相当于 name=person.name  age = person.age gender = person.gender
+    
+    ```
