@@ -30,3 +30,13 @@
     ...person相当于 name=person.name  age = person.age gender = person.gender
     
     ```
+ 12. 调试工具 React Developer Tools 
+    ![image](https://user-images.githubusercontent.com/12959356/201475089-0017cd34-b1de-45d7-85b7-385d1f02374f.png)
+13. 通过prop传给组件的数据都是只读的不能写。   
+14. 引用react的格式    
+    ```
+    import React from 'react';
+    import ReactDom from 'react-dom'
+    ```
+ 15. 通过class创建的组件有声明周期函数，通过function创建的没有。     
+ 16. css模块化。   
