@@ -1,6 +1,6 @@
 参考:https://www.jianshu.com/p/a8abe097d4ed
 
-```下文中的阻塞方法好像特指sleep，wait()等。所以抛出InterruptedException不一定是阻塞方法被打断，请求中断标标志不一定为false。```   
+```下文中的阻塞方法好像特指sleep，wait()等。所以抛出InterruptedException不一定是阻塞方法被打断，请求中断标志不一定为false。方法java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait好像就抛出异常但是没有将断标志设置为false ```   
 ```catch到InterruptedException后是否需要把中断请求设置为false/true,需要视情况而定```
 
 
