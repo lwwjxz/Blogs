@@ -10,4 +10,6 @@ https://github.com/lwwjxz/Blogs/blob/master/java/jvm/linux%2064M.pdf
 
 解决方案：升级JDK，使用没有用到gligc的JDK包看是否替换了默认的glibc文件。命令
 ```ldd /xxx/install/jdkxxx/bin/java```
-引用了libjemalloc.so.2则证明替换了glibc所有没问题。   
+引用了libjemalloc.so.2则证明替换了glibc就没问你了。
+
+pmap 显示内存映射信息   pmap -x pid 
