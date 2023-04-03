@@ -7,3 +7,7 @@ native （C/C++ 代码）申请的内存
 还有 JVM 运行本身需要的内存，比如 GC 等。    
 
 https://github.com/lwwjxz/Blogs/blob/master/java/jvm/linux%2064M.pdf
+
+解决方案：升级JDK，使用没有用到gligc的JDK包看是否替换了默认的glibc文件。命令
+```ldd /xxx/install/jdkxxx/bin/java```
+引用了libjemalloc.so.2则证明替换了glibc所有没问题。   
