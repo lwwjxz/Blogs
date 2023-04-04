@@ -13,3 +13,5 @@ https://github.com/lwwjxz/Blogs/blob/master/java/jvm/linux%2064M.pdf
 引用了libjemalloc.so.2则证明替换了glibc就没问你了。
 
 pmap 显示内存映射信息   pmap -x pid 
+根据第二列逆序逆序排序 pmap -x pid | sort -n -k2
+ 
