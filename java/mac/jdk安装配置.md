@@ -5,4 +5,7 @@
   vim ~/.bash_profile
   # java9 版本号是9 而不是1.9   
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+    
+  # 立即生效 
+  source .~/.bash_profile
   ```
