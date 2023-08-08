@@ -14,3 +14,4 @@
    ![image](https://user-images.githubusercontent.com/12959356/194757755-a4e2c089-35ec-496d-bebd-0712e0a7a607.png)
 6. 方法的调用链，```control + option + H```
 
+7. 源码乱码问题解决插件 https://github.com/YangZhengkuan/auto.transform.encoding/blob/master/README.md
